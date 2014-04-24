@@ -1,0 +1,63 @@
+#OPTIONS:"|-top|uart_parser|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-divnmod|-I|C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project|-I|C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\|-I|C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\lucent\\ecp3.v|-devicelib|C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\lucent\\pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-D_MULTIPLE_FILE_COMPILATION_UNIT_|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\lscc\\diamond\\3.1_x64\\synpbase\\bin64\\c_ver.exe":1384788016
+#CUR:"C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\lucent\\ecp3.v":1384790068
+#CUR:"C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\lucent\\pmi_def.v":1389815298
+#CUR:"C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\vlog\\umr_capim.v":1384787930
+#CUR:"C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\vlog\\scemi_objects.v":1384787680
+#CUR:"C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\vlog\\scemi_pipes.svh":1384787680
+#CUR:"C:\\lscc\\diamond\\3.1_x64\\synpbase\\lib\\vlog\\hypermods.v":1384787680
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\top.v":1364495633
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\ram.v":1363152371
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\sdr_15bit.v":1345588284
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\ddr1.v":1353968005
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\pll_filter.v":1359589293
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\uart_parser.v":1330170520
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\uart_rx.v":1321960852
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\uart_top.v":1266240960
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\uart_tx.v":1321960852
+#CUR:"C:\\Users\\KT\\My Projects\\dac_interface\\lattice_project\\dac\\source\\baud_gen.v":1266245395
+#numinternalfiles:6
+#defaultlanguage:verilog
+0			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v" verilog
+1			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ram.v" verilog
+2			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v" verilog
+3			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ddr1.v" verilog
+4			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\pll_filter.v" verilog
+5			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v" verilog
+6			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_rx.v" verilog
+7			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_top.v" verilog
+8			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_tx.v" verilog
+9			"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\baud_gen.v" verilog
+#Dependency Lists(Uses List)
+0 2 7 1
+1 -1
+2 -1
+3 -1
+4 -1
+5 -1
+6 -1
+7 9 6 8
+8 -1
+9 -1
+#Dependency Lists(Users Of)
+0 -1
+1 0
+2 0
+3 -1
+4 -1
+5 -1
+6 7
+7 0
+8 7
+9 7
+#Design Unit to File Association
+module work sdr_15bit 2
+module work uart_top 7
+module work ram 1
+module work top 0
+module work ddr1 3
+module work pll_filter 4
+module work uart_parser 5
+module work uart_rx 6
+module work baud_gen 9
+module work uart_tx 8

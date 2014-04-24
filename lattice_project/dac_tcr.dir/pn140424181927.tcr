@@ -1,0 +1,7 @@
+#Start recording tcl command: 4/24/2014 18:15:34
+#Project Location: C:/Users/KT/My Projects/dac_interface/lattice_project; Project name: dac
+prj_project open "C:/Users/KT/My Projects/dac_interface/lattice_project/dac.ldf"
+prj_src add "C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/uart_parser.v" "C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/uart_rx.v" "C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/uart_top.v" "C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/uart_tx.v" "C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/baud_gen.v"
+prj_run Synthesis -impl dac
+prj_run Export -impl dac -task Bitgen
+#Stop recording: 4/24/2014 18:19:27

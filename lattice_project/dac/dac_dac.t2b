@@ -1,0 +1,9 @@
+
+
+dac_dac.bit
+
+-g CfgMode:Disable
+-g RamCfg:Reset
+-path "C:/Users/KT/My Projects/dac_interface/lattice_project" 
+-path "C:/Users/KT/My Projects/dac_interface/lattice_project"
+-g ES:No

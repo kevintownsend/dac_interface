@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="pll_filter" module="PLL" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2013 01 30 16:41:48.480" version="5.2" type="Module" synthesis="synplify" source_format="Verilog">
+  <Package>
+		<File name="pll_filter.lpc" type="lpc" modified="2013 01 30 16:41:33.551"/>
+		<File name="pll_filter.v" type="top_level_verilog" modified="2013 01 30 16:41:33.624"/>
+		<File name="pll_filter_tmpl.v" type="template_verilog" modified="2013 01 30 16:41:33.625"/>
+  </Package>
+</DiamondModule>

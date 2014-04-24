@@ -1,0 +1,57 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Apr 24 18:18:33 2014 *
+NOTE DESIGN NAME: uart_parser *
+NOTE DEVICE NAME: LFE3-35EA-6FTBGA256 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS tx_data[0] : C7 : out *
+NOTE PINS clock : D9 : in *
+NOTE PINS int_gnt : L4 : in *
+NOTE PINS int_req : N1 : out *
+NOTE PINS int_read : E1 : out *
+NOTE PINS int_rd_data[7] : D7 : in *
+NOTE PINS int_rd_data[6] : C6 : in *
+NOTE PINS int_rd_data[5] : B7 : in *
+NOTE PINS int_rd_data[4] : A9 : in *
+NOTE PINS int_rd_data[3] : A7 : in *
+NOTE PINS int_rd_data[2] : D8 : in *
+NOTE PINS int_rd_data[1] : A8 : in *
+NOTE PINS int_rd_data[0] : E8 : in *
+NOTE PINS int_write : N3 : out *
+NOTE PINS int_wr_data[7] : L2 : out *
+NOTE PINS int_wr_data[6] : J3 : out *
+NOTE PINS int_wr_data[5] : J1 : out *
+NOTE PINS int_wr_data[4] : G1 : out *
+NOTE PINS int_wr_data[3] : L1 : out *
+NOTE PINS int_wr_data[2] : M2 : out *
+NOTE PINS int_wr_data[1] : K1 : out *
+NOTE PINS int_wr_data[0] : H1 : out *
+NOTE PINS int_address[7] : G3 : out *
+NOTE PINS int_address[6] : E4 : out *
+NOTE PINS int_address[5] : F3 : out *
+NOTE PINS int_address[4] : F1 : out *
+NOTE PINS int_address[3] : K2 : out *
+NOTE PINS int_address[2] : F2 : out *
+NOTE PINS int_address[1] : H4 : out *
+NOTE PINS int_address[0] : M1 : out *
+NOTE PINS tx_busy : F4 : in *
+NOTE PINS new_tx_data : B5 : out *
+NOTE PINS tx_data[7] : E3 : out *
+NOTE PINS tx_data[6] : D6 : out *
+NOTE PINS tx_data[5] : C8 : out *
+NOTE PINS tx_data[4] : B6 : out *
+NOTE PINS tx_data[3] : E9 : out *
+NOTE PINS tx_data[2] : E6 : out *
+NOTE PINS tx_data[1] : A6 : out *
+NOTE PINS new_rx_data : H2 : in *
+NOTE PINS rx_data[7] : L5 : in *
+NOTE PINS rx_data[6] : H3 : in *
+NOTE PINS rx_data[5] : L3 : in *
+NOTE PINS rx_data[4] : G2 : in *
+NOTE PINS rx_data[3] : J4 : in *
+NOTE PINS rx_data[2] : K3 : in *
+NOTE PINS rx_data[1] : K4 : in *
+NOTE PINS rx_data[0] : G4 : in *
+NOTE PINS reset : G15 : in *
+NOTE CONFIGURATION MODE: SPI *
+NOTE COMPRESSION: off *

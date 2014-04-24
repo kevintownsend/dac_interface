@@ -1,0 +1,38 @@
+[Device]
+Family=latticeecp3
+PartType=LFE3-35EA
+PartName=LFE3-35EA-8FN484C
+SpeedGrade=8
+Package=FPBGA484
+OperatingCondition=COM
+Status=P
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=SDR
+CoreRevision=5.2
+ModuleName=sdr_15bit
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=08/21/2012
+Time=17:31:24
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+mode=Transmit
+io_type=LVCMOS33
+width=15
+freq_in=100
+bandwidth=1500
+interface=GOREG_TX.SCLK
+negedge=DISABLED
+del=
+fdel=

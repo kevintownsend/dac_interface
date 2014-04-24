@@ -1,0 +1,98 @@
+Running in Lattice mode
+
+
+Starting:    C:\lscc\diamond\3.1_x64\synpbase\win64\mbin\synbatch.exe
+Install:     C:\lscc\diamond\3.1_x64\synpbase
+Date:        Thu Apr 24 18:16:07 2014
+Version:     I-2013.09L 
+
+Arguments:   -product synplify_pro  -batch dac_dac_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ddr1.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ddr1.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\pll_filter.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\pll_filter.v"
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\backup\dac_dac.srr
+
+log file: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr"
+
+
+
+
+
+Running proj_1|dac
+
+
+Running: Compile on proj_1|dac
+
+
+Running: Compile Process on proj_1|dac
+
+
+Running: Compile Input on proj_1|dac
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_comp.srs to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srs
+
+compiler Completed with warnings
+Return Code: 1
+Run Time:0h:00m:03s
+
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srf
+
+Complete: Compile Process on proj_1|dac
+
+
+Running: Premap on proj_1|dac
+
+premap Completed with warnings
+Return Code: 1
+Run Time:0h:00m:04s
+
+
+Complete: Compile on proj_1|dac
+
+
+Running: Map on proj_1|dac
+
+
+Running: Map & Optimize on proj_1|dac
+
+fpga_mapper Completed with warnings
+Return Code: 1
+Run Time:0h:00m:09s
+
+
+Complete: Map on proj_1|dac
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srf
+
+Complete: Logic Synthesis on proj_1|dac
+
+TCL script complete: "dac_dac_synplify.tcl"
+
+exit status=0
+
+
+exit status=0
+
+
+Save changes for project:
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\proj_1.prj
+
+batch mode default:no
+

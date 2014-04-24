@@ -1,0 +1,1 @@
+@W: MT529 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":509:0:509:5|Found inferred clock uart_parser|clock which controls 86 sequential elements including tx_data[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

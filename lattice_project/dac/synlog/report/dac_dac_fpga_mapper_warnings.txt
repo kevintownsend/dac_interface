@@ -1,0 +1,1 @@
+@W: MT420 |Found inferred clock uart_parser|clock with period 4.02ns. Please declare a user-defined clock on object "p:clock"

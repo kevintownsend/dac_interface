@@ -1,0 +1,44 @@
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 800R, Built Nov 18 2013 10:58:25
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2013.09L 
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@L: C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac_scck.rpt 
+Printing clock  summary report in "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 117MB)
+
+syn_allowed_resources : blockrams=72  set on top level netlist uart_parser
+
+
+Clock Summary
+**************
+
+Start                 Requested     Requested     Clock        Clock                
+Clock                 Frequency     Period        Type         Group                
+------------------------------------------------------------------------------------
+uart_parser|clock     287.1 MHz     3.483         inferred     Autoconstr_clkgroup_0
+====================================================================================
+
+@W: MT529 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":509:0:509:5|Found inferred clock uart_parser|clock which controls 86 sequential elements including tx_data[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 142MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
+# Thu Apr 24 18:16:13 2014
+
+###########################################################]

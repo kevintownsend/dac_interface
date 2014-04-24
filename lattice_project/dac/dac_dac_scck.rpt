@@ -1,0 +1,28 @@
+# Synospys Constraint Checker(syntax only), version maplat, Build 800R, built Nov 18 2013
+# Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+
+# Written on Thu Apr 24 18:16:11 2014
+
+
+##### DESIGN INFO #######################################################
+
+Top View:                "uart_parser"
+Constraint File(s):      (none)
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+**************
+
+Start                 Requested     Requested     Clock        Clock                
+Clock                 Frequency     Period        Type         Group                
+------------------------------------------------------------------------------------
+uart_parser|clock     287.1 MHz     3.483         inferred     Autoconstr_clkgroup_0
+====================================================================================

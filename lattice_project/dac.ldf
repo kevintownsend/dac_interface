@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.0" title="dac" device="LFE3-35EA-6FTN256C" default_implementation="dac">
+    <Options/>
+    <Implementation title="dac" dir="dac" description="dac" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="uart_parser"/>
+        <Source name="dac/source/top.v" type="Verilog" type_short="Verilog">
+            <Options top_module="top"/>
+        </Source>
+        <Source name="dac/source/ram.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/sdr_15bit.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="dac/source/sdr_15bit.lpc" type="LPC_Module" type_short="LPC">
+            <Options/>
+        </Source>
+        <Source name="dac/source/sdr_15bit.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/ddr1.ipx" type="IPX_Module" type_short="IPX">
+            <Options top_module="ddr1"/>
+        </Source>
+        <Source name="dac/source/ddr1.lpc" type="LPC_Module" type_short="LPC">
+            <Options/>
+        </Source>
+        <Source name="dac/source/ddr1.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/pll_filter.ipx" type="IPX_Module" type_short="IPX">
+            <Options top_module="pll_filter"/>
+        </Source>
+        <Source name="dac/source/pll_filter.lpc" type="LPC_Module" type_short="LPC">
+            <Options/>
+        </Source>
+        <Source name="dac/source/pll_filter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/uart_parser.v" type="Verilog" type_short="Verilog">
+            <Options top_module="uart_parser"/>
+        </Source>
+        <Source name="dac/source/uart_rx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/uart_top.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/uart_tx.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/baud_gen.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/source/DAC.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="dac1.sty"/>
+</BaliProject>

@@ -1,0 +1,487 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>         Lattice Mapping Report File for Design Module 'uart_parser'
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a LatticeECP3 -p LFE3-35EA -t FTBGA256 -s 6 -oc Commercial
+     dac_dac.ngd -o dac_dac_map.ncd -pr dac_dac.prf -mp dac_dac.mrp
+     C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/DAC.lpf
+     -gui
+Target Vendor:  LATTICE
+Target Device:  LFE3-35EAFTBGA256
+Target Performance:   6
+Mapper:  ep5c00,  version:  Diamond (64-bit) 3.1.0.96
+Mapped on:  04/24/14  18:16:39
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:     86 out of 25746 (0%)
+      PFU registers:           62 out of 24948 (0%)
+      PIO registers:           24 out of   798 (3%)
+   Number of SLICEs:       109 out of 16632 (1%)
+      SLICEs as Logic/ROM:    109 out of 16632 (1%)
+      SLICEs as RAM:            0 out of  3204 (0%)
+      SLICEs as Carry:         10 out of 16632 (0%)
+   Number of LUT4s:        187 out of 33264 (1%)
+      Number of logic LUTs:      167
+      Number of distributed RAM:   0 (0 LUT4s)
+      Number of ripple logic:     10 (20 LUT4s)
+      Number of shift registers:   0
+   Number of PIO sites used: 49 out of 133 (37%)
+   Number of PIO FIXEDDELAY:    0
+   Number of PCS (SerDes):  0 out of 1 (0%) with bonded PIO sites
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 4 (0%)
+   Number of DLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 72 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18C          0
+   MULT9X9C            0
+   ALU54A              0
+   ALU24A              0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 128 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 64 (0 %)
+   Number of clocks:  1
+     Net clock_c: 61 loads, 61 rising, 0 falling (Driver: PIO clock )
+   Number of Clock Enables:  18
+
+     Net read_done: 8 loads, 0 LSLICEs
+     Net N_57_i: 2 loads, 1 LSLICEs
+     Net un1_write_req7_2_0_a2: 8 loads, 0 LSLICEs
+     Net new_rx_data_c: 6 loads, 6 LSLICEs
+     Net un1_data_param10_0: 4 loads, 4 LSLICEs
+     Net bin_byte_counte: 4 loads, 4 LSLICEs
+     Net N_460_i: 5 loads, 0 LSLICEs
+     Net N_55: 1 loads, 1 LSLICEs
+     Net read_op9: 2 loads, 2 LSLICEs
+     Net tx_end_p: 2 loads, 2 LSLICEs
+     Net N_475_i: 2 loads, 2 LSLICEs
+     Net N_51: 1 loads, 1 LSLICEs
+     Net un1_write_req7_2_i: 1 loads, 1 LSLICEs
+     Net un1_read_req7_2_i: 1 loads, 1 LSLICEs
+     Net int_addresse: 4 loads, 4 LSLICEs
+     Net un1_bin_write_op5_0: 1 loads, 1 LSLICEs
+     Net un1_bin_read_op5_0: 1 loads, 1 LSLICEs
+     Net un1_addr_param13_0: 4 loads, 4 LSLICEs
+   Number of local set/reset loads for net reset_c merged into GSR:  86
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net new_rx_data_c: 31 loads
+     Net rx_data_c[4]: 24 loads
+     Net un28lto0_c: 19 loads
+     Net main_sm[4]: 16 loads
+     Net VCC: 16 loads
+     Net rx_data_c[5]: 15 loads
+     Net bin_read_op: 14 loads
+     Net main_sm[9]: 14 loads
+     Net rx_data_c[2]: 14 loads
+     Net rx_data_c[1]: 12 loads
+
+
+
+
+   Number of warnings:  38
+   Number of errors:    0
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(10): Semantic
+     error in "FREQUENCY NET "clk_c" 100.000000 MHz ;": clk_c matches no clock
+     nets in the design.  Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(4): Semantic
+     error in "LOCATE COMP "led0" SITE "Y20" ;": COMP "led0" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(5): Semantic
+     error in "LOCATE COMP "led1" SITE "AA21" ;": COMP "led1" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(6): Semantic
+
+     error in "LOCATE COMP "led2" SITE "U18" ;": COMP "led2" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(7): Semantic
+     error in "LOCATE COMP "clk" SITE "L5" ;": COMP "clk" not found in design.
+     Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(8): Semantic
+     error in "LOCATE COMP "rstn" SITE "A21" ;": COMP "rstn" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(9): Semantic
+     error in "LOCATE COMP "uart_in" SITE "G19" ;": COMP "uart_in" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(11): Semantic
+     error in "LOCATE COMP "uart_out" SITE "G20" ;": COMP "uart_out" not found
+     in design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(12): Semantic
+     error in "LOCATE COMP "clk_calin_n" SITE "G15" ;": COMP "clk_calin_n" not
+     found in design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(13): Semantic
+     error in "LOCATE COMP "rst_in_n" SITE "D15" ;": COMP "rst_in_n" not found
+     in design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(14): Semantic
+     error in "LOCATE COMP "en_in_n" SITE "C15" ;": COMP "en_in_n" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(15): Semantic
+     error in "LOCATE COMP "d_in_14" SITE "B11" ;": COMP "d_in_14" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(16): Semantic
+     error in "LOCATE COMP "d_in_13" SITE "B12" ;": COMP "d_in_13" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(17): Semantic
+     error in "LOCATE COMP "d_in_12" SITE "A12" ;": COMP "d_in_12" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(18): Semantic
+     error in "LOCATE COMP "d_in_11" SITE "A13" ;": COMP "d_in_11" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(19): Semantic
+     error in "LOCATE COMP "d_in_10" SITE "E12" ;": COMP "d_in_10" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(20): Semantic
+     error in "LOCATE COMP "d_in_9" SITE "E13" ;": COMP "d_in_9" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(21): Semantic
+
+     error in "LOCATE COMP "d_in_8" SITE "C13" ;": COMP "d_in_8" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(22): Semantic
+     error in "LOCATE COMP "clk_out_fpga" SITE "A17" ;": COMP "clk_out_fpga" not
+     found in design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(23): Semantic
+     error in "IOBUF PORT "clk_out_fpga" IO_TYPE=LVCMOS33 SLEWRATE=SLOW
+     PULLMODE=UP DRIVE=20 ;": Port "clk_out_fpga" does not exist in the design.
+     Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(24): Semantic
+     error in "LOCATE COMP "adr_2" SITE "G14" ;": COMP "adr_2" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(25): Semantic
+     error in "LOCATE COMP "adr_1" SITE "B16" ;": COMP "adr_1" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(26): Semantic
+     error in "LOCATE COMP "adr_0" SITE "F15" ;": COMP "adr_0" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(27): Semantic
+     error in "LOCATE COMP "oe_cal_n" SITE "E22" ;": COMP "oe_cal_n" not found
+     in design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(28): Semantic
+     error in "LOCATE COMP "clk_in_fpga" SITE "A19" ;": COMP "clk_in_fpga" not
+     found in design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(29): Semantic
+     error in "IOBUF PORT "led2" IO_TYPE=LVCMOS33 ;": Port "led2" does not exist
+     in the design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(30): Semantic
+     error in "IOBUF PORT "clk" IO_TYPE=LVDS25 ;": Port "clk" does not exist in
+     the design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(31): Semantic
+     error in "LOCATE COMP "d_in_7" SITE "A15" ;": COMP "d_in_7" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(32): Semantic
+     error in "LOCATE COMP "d_in_6" SITE "F14" ;": COMP "d_in_6" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(33): Semantic
+     error in "LOCATE COMP "d_in_5" SITE "F13" ;": COMP "d_in_5" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(34): Semantic
+     error in "LOCATE COMP "d_in_4" SITE "B14" ;": COMP "d_in_4" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(35): Semantic
+     error in "LOCATE COMP "d_in_3" SITE "A14" ;": COMP "d_in_3" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(36): Semantic
+     error in "LOCATE COMP "d_in_2" SITE "D14" ;": COMP "d_in_2" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(37): Semantic
+     error in "LOCATE COMP "d_in_1" SITE "D13" ;": COMP "d_in_1" not found in
+     design. Disable this preference.
+WARNING - map: C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(38): Semantic
+     error in "LOCATE COMP "d_in_0" SITE "C14" ;": COMP "d_in_0" not found in
+     design. Disable this preference.
+WARNING - map: Preference parsing results:  35 semantic errors detected
+WARNING - map: Using local reset signal 'reset_c' to infer global GSR net.
+WARNING - map: There are semantic errors in the preference file C:/Users/KT/My
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[0]          | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| clock               | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_gnt             | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_req             | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_read            | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[7]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[6]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[5]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[4]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[3]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[2]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[1]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_rd_data[0]      | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| int_write           | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[7]      | OUTPUT    | LVCMOS33  | OUT        |            |
+
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[6]      | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[5]      | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[4]      | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[3]      | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[2]      | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[1]      | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| int_wr_data[0]      | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[7]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[6]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[5]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[4]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[3]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[2]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[1]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| int_address[0]      | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_busy             | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| new_tx_data         | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[7]          | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[6]          | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[5]          | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[4]          | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[3]          | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[2]          | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| tx_data[1]          | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| new_rx_data         | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rx_data[7]          | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rx_data[6]          | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rx_data[5]          | INPUT     | LVCMOS33  |            |            |
+
++---------------------+-----------+-----------+------------+------------+
+| rx_data[4]          | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rx_data[3]          | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rx_data[2]          | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rx_data[1]          | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| rx_data[0]          | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| reset               | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Signal int_address_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Signal bin_byte_count_s_0_S1[7] undriven or does not drive anything - clipped.
+Signal bin_byte_count_s_0_COUT[7] undriven or does not drive anything - clipped.
+Signal bin_byte_count_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_2 undriven or does not drive anything - clipped.
+Signal int_address_s_0_S1[7] undriven or does not drive anything - clipped.
+Signal int_address_s_0_COUT[7] undriven or does not drive anything - clipped.
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The local reset signal 'reset_c' of the design has been inferred as Global
+        Set Reset (GSR). The reset signal used for GSR control is 'reset_c'.
+
+GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 1 secs
+   Total REAL Time: 7 secs
+   Peak Memory Usage: 58 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor
+     Corporation,  All rights reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

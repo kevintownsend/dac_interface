@@ -1,0 +1,12 @@
+---------------------------------------------------
+Report for cell uart_parser
+   Instance path: uart_parser
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     109.00        100.0
+                                 IOLGC	      24.00        100.0
+                                  LUT4	     167.00        100.0
+                                 IOREG	         24        100.0
+                                 IOBUF	         49        100.0
+                                PFUREG	         62        100.0
+                                RIPPLE	         10        100.0

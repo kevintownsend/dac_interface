@@ -1,0 +1,27 @@
+Selecting top level module uart_parser
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":6:7:6:17|Synthesizing module uart_parser
+
+@W: CL271 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":372:0:372:5|Pruning bits 15 to 8 of addr_param[15:0] -- not in use ...
+
+@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":509:0:509:5|Trying to extract state machine for register tx_sm
+Extracted state machine for register tx_sm
+State machine has 5 reachable states with original encodings of:
+   000
+   001
+   100
+   101
+   110
+@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":132:0:132:5|Trying to extract state machine for register main_sm
+Extracted state machine for register main_sm
+State machine has 11 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   1000
+   1001
+   1010
+   1011
+   1100

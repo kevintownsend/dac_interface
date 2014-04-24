@@ -1,0 +1,14 @@
+@P:  Worst Slack : -0.709
+@P:  uart_parser|clock - Estimated Frequency : 211.7 MHz
+@P:  uart_parser|clock - Requested Frequency : 249.1 MHz
+@P:  uart_parser|clock - Estimated Period : 4.724
+@P:  uart_parser|clock - Requested Period : 4.015
+@P:  uart_parser|clock - Slack : -0.709
+@P:  Worst Slack(min analysis) : 0.365
+@P:  uart_parser|clock - Estimated Frequency(min analysis) : 211.7 MHz
+@P:  uart_parser|clock - Requested Frequency(min analysis) : 249.1 MHz
+@P:  uart_parser|clock - Estimated Period(min analysis) : 4.724
+@P:  uart_parser|clock - Requested Period(min analysis) : 4.015
+@P:  uart_parser|clock - Slack(min analysis) : -0.709
+@P:  Total Area : 166.0
+@P:  CPU Time : 0h:00m:05s
