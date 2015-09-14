@@ -1,14 +1,40 @@
-@P:  Worst Slack : -0.709
-@P:  uart_parser|clock - Estimated Frequency : 211.7 MHz
-@P:  uart_parser|clock - Requested Frequency : 249.1 MHz
-@P:  uart_parser|clock - Estimated Period : 4.724
-@P:  uart_parser|clock - Requested Period : 4.015
-@P:  uart_parser|clock - Slack : -0.709
-@P:  Worst Slack(min analysis) : 0.365
-@P:  uart_parser|clock - Estimated Frequency(min analysis) : 211.7 MHz
-@P:  uart_parser|clock - Requested Frequency(min analysis) : 249.1 MHz
-@P:  uart_parser|clock - Estimated Period(min analysis) : 4.724
-@P:  uart_parser|clock - Requested Period(min analysis) : 4.015
-@P:  uart_parser|clock - Slack(min analysis) : -0.709
-@P:  Total Area : 166.0
-@P:  CPU Time : 0h:00m:05s
+@P:  Worst Slack : -1.392
+@P:  top|clk - Estimated Frequency : 165.3 MHz
+@P:  top|clk - Requested Frequency : 194.5 MHz
+@P:  top|clk - Estimated Period : 6.049
+@P:  top|clk - Requested Period : 5.142
+@P:  top|clk - Slack : -0.907
+@P:  top|norm_clk_inferred_clock - Estimated Frequency : 107.8 MHz
+@P:  top|norm_clk_inferred_clock - Requested Frequency : 126.8 MHz
+@P:  top|norm_clk_inferred_clock - Estimated Period : 9.278
+@P:  top|norm_clk_inferred_clock - Requested Period : 7.886
+@P:  top|norm_clk_inferred_clock - Slack : -1.392
+@P:  System - Estimated Frequency : NA
+@P:  System - Requested Frequency : 1.0 MHz
+@P:  System - Estimated Period : NA
+@P:  System - Requested Period : 1000.000
+@P:  System - Slack : NA
+@P:  Worst Slack(min analysis) : 0.231
+@P:  top|clk - Estimated Frequency(min analysis) : 165.3 MHz
+@P:  top|clk - Requested Frequency(min analysis) : 194.5 MHz
+@P:  top|clk - Estimated Period(min analysis) : 6.049
+@P:  top|clk - Requested Period(min analysis) : 5.142
+@P:  top|clk - Slack(min analysis) : -0.907
+@P:  top|norm_clk_inferred_clock - Estimated Frequency(min analysis) : 107.8 MHz
+@P:  top|norm_clk_inferred_clock - Requested Frequency(min analysis) : 126.8 MHz
+@P:  top|norm_clk_inferred_clock - Estimated Period(min analysis) : 9.278
+@P:  top|norm_clk_inferred_clock - Requested Period(min analysis) : 7.886
+@P:  top|norm_clk_inferred_clock - Slack(min analysis) : -1.392
+@P:  System - Estimated Frequency(min analysis) : NA
+@P:  System - Requested Frequency(min analysis) : 1.0 MHz
+@P:  System - Estimated Period(min analysis) : NA
+@P:  System - Requested Period(min analysis) : 1000.000
+@P:  System - Slack(min analysis) : NA
+@P:  Total Area : 650.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:07s

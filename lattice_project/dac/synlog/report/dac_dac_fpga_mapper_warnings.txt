@@ -1,1 +1,3 @@
-@W: MT420 |Found inferred clock uart_parser|clock with period 4.02ns. Please declare a user-defined clock on object "p:clock"
+@W: MT246 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":187:4:187:7|Blackbox DCS is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock top|clk with period 5.14ns. Please declare a user-defined clock on object "p:clk"
+@W: MT420 |Found inferred clock top|norm_clk_inferred_clock with period 7.89ns. Please declare a user-defined clock on object "n:norm_clk"

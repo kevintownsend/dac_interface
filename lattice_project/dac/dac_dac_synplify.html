@@ -7,26 +7,27 @@
 </STYLE>
 </HEAD>
 <PRE><A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
-#Build: Synplify Pro I-2013.09L , Build 064R, Nov 15 2013
-#install: C:\lscc\diamond\3.1_x64\synpbase
-#OS: Windows 7 6.2
+#Build: Synplify Pro J-2015.03L, Build 030R, Apr 20 2015
+#install: C:\lscc\diamond\3.5_x64\synpbase
+#OS: Windows 8 6.2
 #Hostname: FIREFLY
 
 #Implementation: dac
 
-$ Start of Compile
-#Thu Apr 24 18:16:07 2014
-
-Synopsys Verilog Compiler, version comp201309rc, Build 136R, built Nov 18 2013
+Synopsys HDL Compiler, version comp201503p1, Build 058R, built Apr 20 2015
 @N|Running in 64-bit mode
-Copyright (C) 1994-2013 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
 
-@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\ecp3.v"
-@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\pmi_def.v"
-@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\umr_capim.v"
-@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\scemi_objects.v"
-@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\scemi_pipes.svh"
-@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\hypermods.v"
+Synopsys Verilog Compiler, version comp201503p1, Build 058R, built Apr 20 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\pmi_def.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\hypermods.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\umr_capim.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\scemi_objects.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\scemi_pipes.svh"
 @I::"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v"
 @I::"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ram.v"
 @I::"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v"
@@ -38,47 +39,120 @@ Copyright (C) 1994-2013 Synopsys, Inc. This software and the associated document
 @I::"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_tx.v"
 @I::"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\baud_gen.v"
 Verilog syntax check successful!
-Options changed - recompiling
-Selecting top level module uart_parser
-@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":6:7:6:17|Synthesizing module uart_parser
+File C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v changed - recompiling
+Selecting top level module top
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":138:7:138:9|Synthesizing module DCS
 
-@W: CL271 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":372:0:372:5|Pruning bits 15 to 8 of addr_param[15:0] -- not in use ...
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":752:7:752:8|Synthesizing module OB
 
-@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":509:0:509:5|Trying to extract state machine for register tx_sm
-Extracted state machine for register tx_sm
-State machine has 5 reachable states with original encodings of:
-   000
-   001
-   100
-   101
-   110
-@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":132:0:132:5|Trying to extract state machine for register main_sm
-Extracted state machine for register main_sm
-State machine has 11 reachable states with original encodings of:
-   0000
-   0001
-   0010
-   0011
-   0100
-   0101
-   1000
-   1001
-   1010
-   1011
-   1100
-@END
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":1029:7:1029:9|Synthesizing module VLO
 
-At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 75MB peak: 81MB)
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":1707:7:1707:13|Synthesizing module ODDRXD1
+
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":795:7:795:14|Synthesizing module OFS1P3DX
+
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":1025:7:1025:9|Synthesizing module VHI
+
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v":8:7:8:15|Synthesizing module sdr_15bit
+
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\baud_gen.v":13:7:13:14|Synthesizing module baud_gen
+
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_rx.v":6:7:6:13|Synthesizing module uart_rx
+
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_tx.v":6:7:6:13|Synthesizing module uart_tx
+
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_top.v":6:7:6:14|Synthesizing module uart_top
+
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ram.v":1:7:1:9|Synthesizing module ram
+
+@N: CL134 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Found RAM ram, depth=72001, width=16
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":5:7:5:9|Synthesizing module top
+
+@W: CG133 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":94:23:94:44|No assignment to next_norm_mode_div_clk
+@W: CG133 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":95:26:95:50|No assignment to next_norm_mode_extern_clk
+@W: CG360 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":174:5:174:20|No assignment to wire norm_clk_mid_buf
+
+@W: CG360 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":216:5:216:12|No assignment to wire test_clk
+
+@W: CG360 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":216:15:216:22|No assignment to wire test_out
+
+@W: CL271 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Pruning bits 7 to 4 of status[7:0] -- not in use ...
+
+@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 32 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+   10010
+   10011
+   10100
+   10101
+   10110
+   10111
+   11000
+   11001
+   11010
+   11011
+   11100
+   11101
+   11110
+   11111
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 171MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu Apr 24 18:16:09 2014
+# Fri Sep 11 13:39:46 2015
 
 ###########################################################]
-Premap Report
+Synopsys Netlist Linker, version comp201503p1, Build 058R, built Apr 20 2015
+@N|Running in 64-bit mode
+File C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\layer0.srs changed - recompiling
 
-Synopsys Lattice Technology Pre-mapping, Version maplat, Build 800R, Built Nov 18 2013 10:58:25
-Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
-Product Version I-2013.09L 
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Sep 11 13:39:47 2015
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Sep 11 13:39:47 2015
+
+###########################################################]
+Synopsys Netlist Linker, version comp201503p1, Build 058R, built Apr 20 2015
+@N|Running in 64-bit mode
+File C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Sep 11 13:39:48 2015
+
+###########################################################]
+Pre-mapping Report
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1176R, Built Apr 20 2015 17:38:44
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L
 
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
 
@@ -93,38 +167,47 @@ Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 117MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
 
-syn_allowed_resources : blockrams=72  set on top level netlist uart_parser
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=72  set on top level netlist top
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 141MB)
 
 
-Clock Summary
-**************
 
-Start                 Requested     Requested     Clock        Clock                
-Clock                 Frequency     Period        Type         Group                
-------------------------------------------------------------------------------------
-uart_parser|clock     287.1 MHz     3.483         inferred     Autoconstr_clkgroup_0
-====================================================================================
+@S |Clock Summary
+*****************
 
-@W: MT529 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":509:0:509:5|Found inferred clock uart_parser|clock which controls 86 sequential elements including tx_data[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+Start                           Requested     Requested     Clock        Clock                
+Clock                           Frequency     Period        Type         Group                
+----------------------------------------------------------------------------------------------
+System                          1.0 MHz       1000.000      system       system_clkgroup      
+top|clk                         309.1 MHz     3.236         inferred     Autoconstr_clkgroup_0
+top|norm_clk_inferred_clock     4.2 MHz       240.613       inferred     Autoconstr_clkgroup_1
+==============================================================================================
+
+@W: MT529 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\baud_gen.v":32:0:32:5|Found inferred clock top|clk which controls 252 sequential elements including uart_block.baud_gen_1.counter[15:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\sdr_15bit.v":42:13:42:28|Found inferred clock top|norm_clk_inferred_clock which controls 79 sequential elements including sdr_data.Inst2_OFS1P3DX14. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 142MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 141MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Thu Apr 24 18:16:13 2014
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Sep 11 13:39:48 2015
 
 ###########################################################]
 Map & Optimize Report
 
-Synopsys Lattice Technology Mapper, Version maplat, Build 800R, Built Nov 18 2013 10:58:25
-Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
-Product Version I-2013.09L 
+Synopsys Lattice Technology Mapper, Version maplat, Build 1176R, Built Apr 20 2015 17:38:44
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L
 
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
 
@@ -137,143 +220,192 @@ Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 111MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
 
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
 
+@N: BN114 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\sdr_15bit.v":39:12:39:24|Removing instance sdr_data.Inst3_ODDRXD1 of black_box view:work.ODDRXD1(verilog) because there are no references to its outputs 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 @N: MT206 |Auto Constrain mode is enabled
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[6] mapped in logic.
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[4:0] mapped in logic.
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[6] mapped in logic.
-@N: MO106 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|Found ROM, 'tx_char[6]', 15 words by 1 bits 
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[4:0] mapped in logic.
-@N: MO106 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|Found ROM, 'tx_char[4:0]', 15 words by 5 bits 
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
 
-Encoding state machine main_sm[10:0] (view:work.uart_parser(verilog))
+Encoding state machine state[31:0] (view:work.top(verilog))
 original code -> new code
-   0000 -> 00000000001
-   0001 -> 00000000010
-   0010 -> 00000000100
-   0011 -> 00000001000
-   0100 -> 00000010000
-   0101 -> 00000100000
-   1000 -> 00001000000
-   1001 -> 00010000000
-   1010 -> 00100000000
-   1011 -> 01000000000
-   1100 -> 10000000000
-Encoding state machine tx_sm[4:0] (view:work.uart_parser(verilog))
-original code -> new code
-   000 -> 00001
-   001 -> 00010
-   100 -> 00100
-   101 -> 01000
-   110 -> 10000
-@N:"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":466:0:466:5|Found counter in view:work.uart_parser(verilog) inst int_address[7:0]
-@N:"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":389:0:389:5|Found counter in view:work.uart_parser(verilog) inst bin_byte_count[7:0]
+   00000 -> 00000000000000000000000000000001
+   00001 -> 00000000000000000000000000000010
+   00010 -> 00000000000000000000000000000100
+   00011 -> 00000000000000000000000000001000
+   00100 -> 00000000000000000000000000010000
+   00101 -> 00000000000000000000000000100000
+   00110 -> 00000000000000000000000001000000
+   00111 -> 00000000000000000000000010000000
+   01000 -> 00000000000000000000000100000000
+   01001 -> 00000000000000000000001000000000
+   01010 -> 00000000000000000000010000000000
+   01011 -> 00000000000000000000100000000000
+   01100 -> 00000000000000000001000000000000
+   01101 -> 00000000000000000010000000000000
+   01110 -> 00000000000000000100000000000000
+   01111 -> 00000000000000001000000000000000
+   10000 -> 00000000000000010000000000000000
+   10001 -> 00000000000000100000000000000000
+   10010 -> 00000000000001000000000000000000
+   10011 -> 00000000000010000000000000000000
+   10100 -> 00000000000100000000000000000000
+   10101 -> 00000000001000000000000000000000
+   10110 -> 00000000010000000000000000000000
+   10111 -> 00000000100000000000000000000000
+   11000 -> 00000001000000000000000000000000
+   11001 -> 00000010000000000000000000000000
+   11010 -> 00000100000000000000000000000000
+   11011 -> 00001000000000000000000000000000
+   11100 -> 00010000000000000000000000000000
+   11101 -> 00100000000000000000000000000000
+   11110 -> 01000000000000000000000000000000
+   11111 -> 10000000000000000000000000000000
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[31] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[30] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[29] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[28] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[27] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[16] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[3] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N:"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":487:0:487:5|Found counter in view:work.top(verilog) inst data_count[31:0]
+@N:"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":248:0:248:5|Found counter in view:work.top(verilog) inst counter[10:0]
+@N:"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":130:0:130:5|Found counter in view:work.top(verilog) inst default_clk_out_div[9:0]
+@N: MF179 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":332:6:332:29|Found 32 bit by 32 bit '==' comparator, 'next_data_count14'
+@N:"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_tx.v":34:0:34:5|Found counter in view:work.uart_tx(verilog) inst count16[3:0]
 
-Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 147MB peak: 148MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 145MB peak: 149MB)
 
 
-
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 143MB)
-
-
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 144MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 148MB peak: 151MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 144MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 149MB peak: 151MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 143MB peak: 144MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 149MB peak: 151MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 143MB peak: 144MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 148MB peak: 151MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 148MB peak: 150MB)
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 148MB peak: 151MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 158MB peak: 160MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-Pass		 CPU time		Worst Slack		Luts / Registers
-------------------------------------------------------------
-   1		0h:00m:02s		    -1.68ns		 157 /        86
-------------------------------------------------------------
+   1		0h:00m:03s		    -2.00ns		 658 /       298
+   2		0h:00m:03s		    -2.00ns		 628 /       298
+   3		0h:00m:03s		    -2.00ns		 628 /       298
+   4		0h:00m:03s		    -2.52ns		 628 /       298
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[16]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[17]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[19]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[18]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[20]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[21]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[23]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[22]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[24]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[25]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Instance "norm_ram.ram_adreg[12]" with 178 loads replicated 3 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Instance "norm_ram.ram_adreg[11]" with 144 loads replicated 3 times to improve timing 
+Timing driven replication report
+Added 16 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
 
 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Instance "norm_ram.ram_adreg[13]" with 104 loads replicated 3 times to improve timing 
+Added 3 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+   5		0h:00m:04s		    -2.00ns		 628 /       317
+   6		0h:00m:04s		    -2.81ns		 641 /       317
+   7		0h:00m:05s		    -2.81ns		 646 /       317
+   8		0h:00m:05s		    -2.80ns		 648 /       317
+   9		0h:00m:05s		    -2.80ns		 650 /       317
 
 
-Pass		 CPU time		Worst Slack		Luts / Registers
-------------------------------------------------------------
-   1		0h:00m:02s		    -1.30ns		 166 /        86
-------------------------------------------------------------
+  10		0h:00m:05s		    -2.80ns		 650 /       317
+  11		0h:00m:05s		    -2.80ns		 651 /       317
+  12		0h:00m:05s		    -2.80ns		 651 /       317
+  13		0h:00m:05s		    -2.80ns		 651 /       317
+  14		0h:00m:05s		    -2.80ns		 651 /       317
 
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 159MB peak: 160MB)
 
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
 
-Pass		 CPU time		Worst Slack		Luts / Registers
-------------------------------------------------------------
-   1		0h:00m:02s		    -1.30ns		 166 /        86
-------------------------------------------------------------
-
-
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 144MB peak: 150MB)
-
-@N: FX164 |The option to pack flops in the IOB has not been specified 
-
-Finished restoring hierarchy (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 144MB peak: 150MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 159MB peak: 160MB)
 
 
 
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
-1 non-gated/non-generated clock tree(s) driving 86 clock pin(s) of sequential element(s)
-0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
-0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+1 non-gated/non-generated clock tree(s) driving 255 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 149 clock pin(s) of sequential element(s)
+0 instances converted, 149 sequential instances remain driven by gated/generated clocks
 
-=========================== Non-Gated/Non-Generated Clocks ============================
-Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
----------------------------------------------------------------------------------------
-@K:CKID0001       clock               port                   86         addr_auto_inc  
-=======================================================================================
+=============================== Non-Gated/Non-Generated Clocks ===============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance       
+----------------------------------------------------------------------------------------------
+@K:CKID0002       clk                 port                   255        default_clk_out_div[0]
+==============================================================================================
+==================================================================================================== Gated/Generated Clocks =====================================================================================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance            Explanation                                                                                                                   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       dcs2                DCS                    149        norm_ram.ram_adreg[16]     Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
+=================================================================================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
-Writing Analyst data base C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:03s; Memory used current: 143MB peak: 150MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 125MB peak: 160MB)
+
+Writing Analyst data base C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 157MB peak: 160MB)
 
 Writing EDIF Netlist and constraint files
-I-2013.09L 
+J-2015.03L
 @N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 147MB peak: 150MB)
-
-@W: MT420 |Found inferred clock uart_parser|clock with period 4.02ns. Please declare a user-defined clock on object "p:clock"
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 160MB peak: 163MB)
 
 
+Start final timing analysis (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 160MB peak: 163MB)
 
-##### START OF TIMING REPORT #####[
-# Timing Report written on Thu Apr 24 18:16:22 2014
+@W: MT246 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":187:4:187:7|Blackbox DCS is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock top|clk with period 5.14ns. Please declare a user-defined clock on object "p:clk"
+
+@W: MT420 |Found inferred clock top|norm_clk_inferred_clock with period 7.89ns. Please declare a user-defined clock on object "n:norm_clk"
+
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Fri Sep 11 13:39:56 2015
 #
 
 
-Top view:               uart_parser
-Requested Frequency:    249.1 MHz
+Top view:               top
+Requested Frequency:    126.8 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    
@@ -287,13 +419,16 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -0.709
+Worst slack in design: -1.392
 
-                      Requested     Estimated     Requested     Estimated                Clock        Clock                
-Starting Clock        Frequency     Frequency     Period        Period        Slack      Type         Group                
----------------------------------------------------------------------------------------------------------------------------
-uart_parser|clock     249.1 MHz     211.7 MHz     4.015         4.724         -0.709     inferred     Autoconstr_clkgroup_0
-===========================================================================================================================
+                                Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock                  Frequency     Frequency     Period        Period        Slack      Type         Group                
+-------------------------------------------------------------------------------------------------------------------------------------
+top|clk                         194.5 MHz     165.3 MHz     5.142         6.049         -0.907     inferred     Autoconstr_clkgroup_0
+top|norm_clk_inferred_clock     126.8 MHz     107.8 MHz     7.886         9.278         -1.392     inferred     Autoconstr_clkgroup_1
+System                          1.0 MHz       NA            1000.000      NA            NA         system       system_clkgroup      
+=====================================================================================================================================
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
 
 
 
@@ -302,12 +437,16 @@ uart_parser|clock     249.1 MHz     211.7 MHz     4.015         4.724         -0
 Clock Relationships
 *******************
 
-Clocks                                |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
------------------------------------------------------------------------------------------------------------------------------
-Starting           Ending             |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
------------------------------------------------------------------------------------------------------------------------------
-uart_parser|clock  uart_parser|clock  |  4.015       -0.709  |  No paths    -      |  No paths    -      |  No paths    -    
-=============================================================================================================================
+Clocks                                                    |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                     Ending                       |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------------------------------------
+top|clk                      System                       |  5.142       3.150   |  No paths    -      |  No paths    -      |  No paths    -    
+top|clk                      top|clk                      |  5.142       -0.907  |  No paths    -      |  No paths    -      |  No paths    -    
+top|clk                      top|norm_clk_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+top|norm_clk_inferred_clock  top|clk                      |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+top|norm_clk_inferred_clock  top|norm_clk_inferred_clock  |  7.887       -1.392  |  No paths    -      |  3.943       2.713  |  No paths    -    
+=================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -321,7 +460,7 @@ No IO constraint found
 
 
 ====================================
-Detailed Report for Clock: uart_parser|clock
+Detailed Report for Clock: top|clk
 ====================================
 
 
@@ -329,41 +468,41 @@ Detailed Report for Clock: uart_parser|clock
 Starting Points with Worst Slack
 ********************************
 
-                      Starting                                                         Arrival           
-Instance              Reference             Type         Pin     Net                   Time        Slack 
-                      Clock                                                                              
----------------------------------------------------------------------------------------------------------
-bin_byte_count[1]     uart_parser|clock     FD1P3DX      Q       bin_byte_count[1]     0.904       -0.709
-bin_byte_count[2]     uart_parser|clock     FD1P3DX      Q       bin_byte_count[2]     0.904       -0.709
-bin_byte_count[3]     uart_parser|clock     FD1P3DX      Q       bin_byte_count[3]     0.904       -0.709
-bin_byte_count[5]     uart_parser|clock     FD1P3DX      Q       bin_byte_count[5]     0.904       -0.709
-bin_byte_count[6]     uart_parser|clock     FD1P3DX      Q       bin_byte_count[6]     0.904       -0.709
-bin_byte_count[7]     uart_parser|clock     FD1P3DX      Q       bin_byte_count[7]     0.904       -0.709
-main_sm[4]            uart_parser|clock     FD1P3DX      Q       main_sm[4]            1.018       -0.196
-read_op               uart_parser|clock     FD1P3DX      Q       read_op               0.802       0.020 
-s_tx_busy_0io         uart_parser|clock     IFS1P3DX     Q       s_tx_busy             0.964       0.023 
-bin_byte_count[0]     uart_parser|clock     FD1P3DX      Q       bin_byte_count[0]     0.934       0.044 
-=========================================================================================================
+                                      Starting                                          Arrival           
+Instance                              Reference     Type        Pin     Net             Time        Slack 
+                                      Clock                                                               
+----------------------------------------------------------------------------------------------------------
+uart_block.baud_gen_1.counter[10]     top|clk       FD1S3DX     Q       counter[10]     1.069       -0.907
+uart_block.baud_gen_1.counter[11]     top|clk       FD1S3DX     Q       counter[11]     1.069       -0.907
+uart_block.baud_gen_1.counter[12]     top|clk       FD1S3DX     Q       counter[12]     1.069       -0.907
+uart_block.baud_gen_1.counter[13]     top|clk       FD1S3DX     Q       counter[13]     1.069       -0.907
+uart_block.baud_gen_1.counter[0]      top|clk       FD1S3DX     Q       counter[0]      1.145       -0.898
+uart_block.baud_gen_1.counter[9]      top|clk       FD1S3DX     Q       counter[9]      1.145       -0.898
+uart_block.baud_gen_1.counter[1]      top|clk       FD1S3DX     Q       counter[1]      1.069       -0.821
+uart_block.baud_gen_1.counter[2]      top|clk       FD1S3DX     Q       counter[2]      1.069       -0.821
+uart_block.baud_gen_1.counter[3]      top|clk       FD1S3DX     Q       counter[3]      1.069       -0.821
+uart_block.baud_gen_1.counter[4]      top|clk       FD1S3DX     Q       counter[4]      1.069       -0.821
+==========================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                   Starting                                                    Required           
-Instance           Reference             Type         Pin     Net              Time         Slack 
-                   Clock                                                                          
---------------------------------------------------------------------------------------------------
-int_address[0]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-int_address[1]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-int_address[2]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-int_address[3]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-int_address[4]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-int_address[5]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-int_address[6]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-int_address[7]     uart_parser|clock     FD1P3DX      SP      int_addresse     3.544        -0.709
-tx_data_0io[0]     uart_parser|clock     OFS1P3DX     SP      N_460_i          3.544        -0.685
-tx_data_0io[1]     uart_parser|clock     OFS1P3DX     SP      N_460_i          3.544        -0.685
-==================================================================================================
+                                      Starting                                            Required           
+Instance                              Reference     Type        Pin     Net               Time         Slack 
+                                      Clock                                                                  
+-------------------------------------------------------------------------------------------------------------
+uart_block.baud_gen_1.counter[15]     top|clk       FD1S3DX     D       counter_4[15]     5.057        -0.907
+uart_block.baud_gen_1.counter[13]     top|clk       FD1S3DX     D       counter_4[13]     5.057        -0.857
+uart_block.baud_gen_1.counter[14]     top|clk       FD1S3DX     D       counter_4[14]     5.057        -0.857
+uart_block.baud_gen_1.counter[11]     top|clk       FD1S3DX     D       counter_4[11]     5.057        -0.807
+uart_block.baud_gen_1.counter[12]     top|clk       FD1S3DX     D       counter_4[12]     5.057        -0.807
+uart_block.baud_gen_1.counter[9]      top|clk       FD1S3DX     D       counter_4[9]      5.057        -0.757
+uart_block.baud_gen_1.counter[10]     top|clk       FD1S3DX     D       counter_4[10]     5.057        -0.757
+uart_block.baud_gen_1.counter[7]      top|clk       FD1S3DX     D       counter_4[7]      5.057        -0.707
+uart_block.baud_gen_1.counter[8]      top|clk       FD1S3DX     D       counter_4[8]      5.057        -0.707
+uart_block.baud_gen_1.counter[5]      top|clk       FD1S3DX     D       counter_4[5]      5.057        -0.657
+=============================================================================================================
 
 
 
@@ -372,224 +511,626 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      4.015
-    - Setup time:                            0.472
+      Requested Period:                      5.142
+    - Setup time:                            0.085
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.544
+    = Required time:                         5.057
 
-    - Propagation time:                      4.252
+    - Propagation time:                      5.965
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -0.709
+    = Slack (non-critical) :                 -0.907
 
-    Number of logic level(s):                4
-    Starting point:                          bin_byte_count[1] / Q
-    Ending point:                            int_address[0] / SP
-    The start point is clocked by            uart_parser|clock [rising] on pin CK
-    The end   point is clocked by            uart_parser|clock [rising] on pin CK
+    Number of logic level(s):                11
+    Starting point:                          uart_block.baud_gen_1.counter[10] / Q
+    Ending point:                            uart_block.baud_gen_1.counter[15] / D
+    The start point is clocked by            top|clk [rising] on pin CK
+    The end   point is clocked by            top|clk [rising] on pin CK
 
-Instance / Net                             Pin      Pin               Arrival     No. of    
-Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------
-bin_byte_count[1]             FD1P3DX      Q        Out     0.904     0.904       -         
-bin_byte_count[1]             Net          -        -       -         -           3         
-bin_byte_count_RNIQVK3[1]     ORCALUT4     A        In      0.000     0.904       -         
-bin_byte_count_RNIQVK3[1]     ORCALUT4     Z        Out     0.782     1.686       -         
-g0_5                          Net          -        -       -         -           2         
-bin_byte_count_RNISBO9[0]     ORCALUT4     D        In      0.000     1.686       -         
-bin_byte_count_RNISBO9[0]     ORCALUT4     Z        Out     0.923     2.609       -         
-N_559_7                       Net          -        -       -         -           10        
-addr_auto_inc_RNIBSCV         ORCALUT4     A        In      0.000     2.609       -         
-addr_auto_inc_RNIBSCV         ORCALUT4     Z        Out     0.728     3.338       -         
-N_103                         Net          -        -       -         -           1         
-bin_write_op_RNIOB0R1         ORCALUT4     A        In      0.000     3.338       -         
-bin_write_op_RNIOB0R1         ORCALUT4     Z        Out     0.914     4.252       -         
-int_addresse                  Net          -        -       -         -           8         
-int_address[0]                FD1P3DX      SP       In      0.000     4.252       -         
-============================================================================================
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+uart_block.baud_gen_1.counter[10]               FD1S3DX      Q        Out     1.069     1.069       -         
+counter[10]                                     Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     A        In      0.000     1.069       -         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     Z        Out     1.010     2.078       -         
+un1_counterlto13_2                              Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     D        In      0.000     2.078       -         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     Z        Out     1.250     3.328       -         
+un1_counterlto9_0_0_1                           Net          -        -       -         -           12        
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        A1       In      0.000     3.328       -         
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        COUT     Out     1.224     4.552       -         
+counter_4_cry_0                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        CIN      In      0.000     4.552       -         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        COUT     Out     0.050     4.602       -         
+counter_4_cry_2                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        CIN      In      0.000     4.602       -         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        COUT     Out     0.050     4.652       -         
+counter_4_cry_4                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        CIN      In      0.000     4.652       -         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        COUT     Out     0.050     4.702       -         
+counter_4_cry_6                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        CIN      In      0.000     4.702       -         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        COUT     Out     0.050     4.752       -         
+counter_4_cry_8                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        CIN      In      0.000     4.752       -         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        COUT     Out     0.050     4.802       -         
+counter_4_cry_10                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        CIN      In      0.000     4.802       -         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        COUT     Out     0.050     4.852       -         
+counter_4_cry_12                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        CIN      In      0.000     4.852       -         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        COUT     Out     0.050     4.902       -         
+counter_4_cry_14                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        CIN      In      0.000     4.902       -         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        S0       Out     1.063     5.965       -         
+counter_4[15]                                   Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter[15]               FD1S3DX      D        In      0.000     5.965       -         
+==============================================================================================================
 
 
 Path information for path number 2: 
-      Requested Period:                      4.015
-    - Setup time:                            0.472
+      Requested Period:                      5.142
+    - Setup time:                            0.085
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.544
+    = Required time:                         5.057
 
-    - Propagation time:                      4.252
+    - Propagation time:                      5.965
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -0.709
+    = Slack (non-critical) :                 -0.907
 
-    Number of logic level(s):                4
-    Starting point:                          bin_byte_count[2] / Q
-    Ending point:                            int_address[0] / SP
-    The start point is clocked by            uart_parser|clock [rising] on pin CK
-    The end   point is clocked by            uart_parser|clock [rising] on pin CK
+    Number of logic level(s):                11
+    Starting point:                          uart_block.baud_gen_1.counter[11] / Q
+    Ending point:                            uart_block.baud_gen_1.counter[15] / D
+    The start point is clocked by            top|clk [rising] on pin CK
+    The end   point is clocked by            top|clk [rising] on pin CK
 
-Instance / Net                             Pin      Pin               Arrival     No. of    
-Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------
-bin_byte_count[2]             FD1P3DX      Q        Out     0.904     0.904       -         
-bin_byte_count[2]             Net          -        -       -         -           3         
-bin_byte_count_RNIQVK3[1]     ORCALUT4     B        In      0.000     0.904       -         
-bin_byte_count_RNIQVK3[1]     ORCALUT4     Z        Out     0.782     1.686       -         
-g0_5                          Net          -        -       -         -           2         
-bin_byte_count_RNISBO9[0]     ORCALUT4     D        In      0.000     1.686       -         
-bin_byte_count_RNISBO9[0]     ORCALUT4     Z        Out     0.923     2.609       -         
-N_559_7                       Net          -        -       -         -           10        
-addr_auto_inc_RNIBSCV         ORCALUT4     A        In      0.000     2.609       -         
-addr_auto_inc_RNIBSCV         ORCALUT4     Z        Out     0.728     3.338       -         
-N_103                         Net          -        -       -         -           1         
-bin_write_op_RNIOB0R1         ORCALUT4     A        In      0.000     3.338       -         
-bin_write_op_RNIOB0R1         ORCALUT4     Z        Out     0.914     4.252       -         
-int_addresse                  Net          -        -       -         -           8         
-int_address[0]                FD1P3DX      SP       In      0.000     4.252       -         
-============================================================================================
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+uart_block.baud_gen_1.counter[11]               FD1S3DX      Q        Out     1.069     1.069       -         
+counter[11]                                     Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     B        In      0.000     1.069       -         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     Z        Out     1.010     2.078       -         
+un1_counterlto13_2                              Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     D        In      0.000     2.078       -         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     Z        Out     1.250     3.328       -         
+un1_counterlto9_0_0_1                           Net          -        -       -         -           12        
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        A1       In      0.000     3.328       -         
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        COUT     Out     1.224     4.552       -         
+counter_4_cry_0                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        CIN      In      0.000     4.552       -         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        COUT     Out     0.050     4.602       -         
+counter_4_cry_2                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        CIN      In      0.000     4.602       -         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        COUT     Out     0.050     4.652       -         
+counter_4_cry_4                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        CIN      In      0.000     4.652       -         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        COUT     Out     0.050     4.702       -         
+counter_4_cry_6                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        CIN      In      0.000     4.702       -         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        COUT     Out     0.050     4.752       -         
+counter_4_cry_8                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        CIN      In      0.000     4.752       -         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        COUT     Out     0.050     4.802       -         
+counter_4_cry_10                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        CIN      In      0.000     4.802       -         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        COUT     Out     0.050     4.852       -         
+counter_4_cry_12                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        CIN      In      0.000     4.852       -         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        COUT     Out     0.050     4.902       -         
+counter_4_cry_14                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        CIN      In      0.000     4.902       -         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        S0       Out     1.063     5.965       -         
+counter_4[15]                                   Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter[15]               FD1S3DX      D        In      0.000     5.965       -         
+==============================================================================================================
 
 
 Path information for path number 3: 
-      Requested Period:                      4.015
-    - Setup time:                            0.472
+      Requested Period:                      5.142
+    - Setup time:                            0.085
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.544
+    = Required time:                         5.057
 
-    - Propagation time:                      4.252
+    - Propagation time:                      5.965
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -0.709
+    = Slack (non-critical) :                 -0.907
 
-    Number of logic level(s):                4
-    Starting point:                          bin_byte_count[3] / Q
-    Ending point:                            int_address[0] / SP
-    The start point is clocked by            uart_parser|clock [rising] on pin CK
-    The end   point is clocked by            uart_parser|clock [rising] on pin CK
+    Number of logic level(s):                11
+    Starting point:                          uart_block.baud_gen_1.counter[12] / Q
+    Ending point:                            uart_block.baud_gen_1.counter[15] / D
+    The start point is clocked by            top|clk [rising] on pin CK
+    The end   point is clocked by            top|clk [rising] on pin CK
 
-Instance / Net                             Pin      Pin               Arrival     No. of    
-Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------
-bin_byte_count[3]             FD1P3DX      Q        Out     0.904     0.904       -         
-bin_byte_count[3]             Net          -        -       -         -           3         
-bin_byte_count_RNIQVK3[1]     ORCALUT4     C        In      0.000     0.904       -         
-bin_byte_count_RNIQVK3[1]     ORCALUT4     Z        Out     0.782     1.686       -         
-g0_5                          Net          -        -       -         -           2         
-bin_byte_count_RNISBO9[0]     ORCALUT4     D        In      0.000     1.686       -         
-bin_byte_count_RNISBO9[0]     ORCALUT4     Z        Out     0.923     2.609       -         
-N_559_7                       Net          -        -       -         -           10        
-addr_auto_inc_RNIBSCV         ORCALUT4     A        In      0.000     2.609       -         
-addr_auto_inc_RNIBSCV         ORCALUT4     Z        Out     0.728     3.338       -         
-N_103                         Net          -        -       -         -           1         
-bin_write_op_RNIOB0R1         ORCALUT4     A        In      0.000     3.338       -         
-bin_write_op_RNIOB0R1         ORCALUT4     Z        Out     0.914     4.252       -         
-int_addresse                  Net          -        -       -         -           8         
-int_address[0]                FD1P3DX      SP       In      0.000     4.252       -         
-============================================================================================
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+uart_block.baud_gen_1.counter[12]               FD1S3DX      Q        Out     1.069     1.069       -         
+counter[12]                                     Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     C        In      0.000     1.069       -         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     Z        Out     1.010     2.078       -         
+un1_counterlto13_2                              Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     D        In      0.000     2.078       -         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     Z        Out     1.250     3.328       -         
+un1_counterlto9_0_0_1                           Net          -        -       -         -           12        
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        A1       In      0.000     3.328       -         
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        COUT     Out     1.224     4.552       -         
+counter_4_cry_0                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        CIN      In      0.000     4.552       -         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        COUT     Out     0.050     4.602       -         
+counter_4_cry_2                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        CIN      In      0.000     4.602       -         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        COUT     Out     0.050     4.652       -         
+counter_4_cry_4                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        CIN      In      0.000     4.652       -         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        COUT     Out     0.050     4.702       -         
+counter_4_cry_6                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        CIN      In      0.000     4.702       -         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        COUT     Out     0.050     4.752       -         
+counter_4_cry_8                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        CIN      In      0.000     4.752       -         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        COUT     Out     0.050     4.802       -         
+counter_4_cry_10                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        CIN      In      0.000     4.802       -         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        COUT     Out     0.050     4.852       -         
+counter_4_cry_12                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        CIN      In      0.000     4.852       -         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        COUT     Out     0.050     4.902       -         
+counter_4_cry_14                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        CIN      In      0.000     4.902       -         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        S0       Out     1.063     5.965       -         
+counter_4[15]                                   Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter[15]               FD1S3DX      D        In      0.000     5.965       -         
+==============================================================================================================
 
 
 Path information for path number 4: 
-      Requested Period:                      4.015
-    - Setup time:                            0.472
+      Requested Period:                      5.142
+    - Setup time:                            0.085
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.544
+    = Required time:                         5.057
 
-    - Propagation time:                      4.252
+    - Propagation time:                      5.965
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -0.709
+    = Slack (non-critical) :                 -0.907
 
-    Number of logic level(s):                4
-    Starting point:                          bin_byte_count[5] / Q
-    Ending point:                            int_address[0] / SP
-    The start point is clocked by            uart_parser|clock [rising] on pin CK
-    The end   point is clocked by            uart_parser|clock [rising] on pin CK
+    Number of logic level(s):                11
+    Starting point:                          uart_block.baud_gen_1.counter[13] / Q
+    Ending point:                            uart_block.baud_gen_1.counter[15] / D
+    The start point is clocked by            top|clk [rising] on pin CK
+    The end   point is clocked by            top|clk [rising] on pin CK
 
-Instance / Net                             Pin      Pin               Arrival     No. of    
-Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------
-bin_byte_count[5]             FD1P3DX      Q        Out     0.904     0.904       -         
-bin_byte_count[5]             Net          -        -       -         -           3         
-bin_byte_count_RNI6CL3[5]     ORCALUT4     A        In      0.000     0.904       -         
-bin_byte_count_RNI6CL3[5]     ORCALUT4     Z        Out     0.782     1.686       -         
-g0_4                          Net          -        -       -         -           2         
-bin_byte_count_RNISBO9[0]     ORCALUT4     C        In      0.000     1.686       -         
-bin_byte_count_RNISBO9[0]     ORCALUT4     Z        Out     0.923     2.609       -         
-N_559_7                       Net          -        -       -         -           10        
-addr_auto_inc_RNIBSCV         ORCALUT4     A        In      0.000     2.609       -         
-addr_auto_inc_RNIBSCV         ORCALUT4     Z        Out     0.728     3.338       -         
-N_103                         Net          -        -       -         -           1         
-bin_write_op_RNIOB0R1         ORCALUT4     A        In      0.000     3.338       -         
-bin_write_op_RNIOB0R1         ORCALUT4     Z        Out     0.914     4.252       -         
-int_addresse                  Net          -        -       -         -           8         
-int_address[0]                FD1P3DX      SP       In      0.000     4.252       -         
-============================================================================================
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+uart_block.baud_gen_1.counter[13]               FD1S3DX      Q        Out     1.069     1.069       -         
+counter[13]                                     Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     D        In      0.000     1.069       -         
+uart_block.baud_gen_1.un1_counterlto13_2        ORCALUT4     Z        Out     1.010     2.078       -         
+un1_counterlto13_2                              Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     D        In      0.000     2.078       -         
+uart_block.baud_gen_1.un1_counterlto9_0_0_1     ORCALUT4     Z        Out     1.250     3.328       -         
+un1_counterlto9_0_0_1                           Net          -        -       -         -           12        
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        A1       In      0.000     3.328       -         
+uart_block.baud_gen_1.counter_4_cry_0_0         CCU2C        COUT     Out     1.224     4.552       -         
+counter_4_cry_0                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        CIN      In      0.000     4.552       -         
+uart_block.baud_gen_1.counter_4_cry_1_0         CCU2C        COUT     Out     0.050     4.602       -         
+counter_4_cry_2                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        CIN      In      0.000     4.602       -         
+uart_block.baud_gen_1.counter_4_cry_3_0         CCU2C        COUT     Out     0.050     4.652       -         
+counter_4_cry_4                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        CIN      In      0.000     4.652       -         
+uart_block.baud_gen_1.counter_4_cry_5_0         CCU2C        COUT     Out     0.050     4.702       -         
+counter_4_cry_6                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        CIN      In      0.000     4.702       -         
+uart_block.baud_gen_1.counter_4_cry_7_0         CCU2C        COUT     Out     0.050     4.752       -         
+counter_4_cry_8                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        CIN      In      0.000     4.752       -         
+uart_block.baud_gen_1.counter_4_cry_9_0         CCU2C        COUT     Out     0.050     4.802       -         
+counter_4_cry_10                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        CIN      In      0.000     4.802       -         
+uart_block.baud_gen_1.counter_4_cry_11_0        CCU2C        COUT     Out     0.050     4.852       -         
+counter_4_cry_12                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        CIN      In      0.000     4.852       -         
+uart_block.baud_gen_1.counter_4_cry_13_0        CCU2C        COUT     Out     0.050     4.902       -         
+counter_4_cry_14                                Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        CIN      In      0.000     4.902       -         
+uart_block.baud_gen_1.counter_4_s_15_0          CCU2C        S0       Out     1.063     5.965       -         
+counter_4[15]                                   Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter[15]               FD1S3DX      D        In      0.000     5.965       -         
+==============================================================================================================
 
 
 Path information for path number 5: 
-      Requested Period:                      4.015
-    - Setup time:                            0.472
+      Requested Period:                      5.142
+    - Setup time:                            0.085
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.544
+    = Required time:                         5.057
 
-    - Propagation time:                      4.252
+    - Propagation time:                      5.965
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -0.709
+    = Slack (non-critical) :                 -0.907
 
-    Number of logic level(s):                4
-    Starting point:                          bin_byte_count[6] / Q
-    Ending point:                            int_address[0] / SP
-    The start point is clocked by            uart_parser|clock [rising] on pin CK
-    The end   point is clocked by            uart_parser|clock [rising] on pin CK
+    Number of logic level(s):                11
+    Starting point:                          uart_block.baud_gen_1.counter[10] / Q
+    Ending point:                            uart_block.baud_gen_1.counter[15] / D
+    The start point is clocked by            top|clk [rising] on pin CK
+    The end   point is clocked by            top|clk [rising] on pin CK
 
-Instance / Net                             Pin      Pin               Arrival     No. of    
-Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------
-bin_byte_count[6]             FD1P3DX      Q        Out     0.904     0.904       -         
-bin_byte_count[6]             Net          -        -       -         -           3         
-bin_byte_count_RNI6CL3[5]     ORCALUT4     B        In      0.000     0.904       -         
-bin_byte_count_RNI6CL3[5]     ORCALUT4     Z        Out     0.782     1.686       -         
-g0_4                          Net          -        -       -         -           2         
-bin_byte_count_RNISBO9[0]     ORCALUT4     C        In      0.000     1.686       -         
-bin_byte_count_RNISBO9[0]     ORCALUT4     Z        Out     0.923     2.609       -         
-N_559_7                       Net          -        -       -         -           10        
-addr_auto_inc_RNIBSCV         ORCALUT4     A        In      0.000     2.609       -         
-addr_auto_inc_RNIBSCV         ORCALUT4     Z        Out     0.728     3.338       -         
-N_103                         Net          -        -       -         -           1         
-bin_write_op_RNIOB0R1         ORCALUT4     A        In      0.000     3.338       -         
-bin_write_op_RNIOB0R1         ORCALUT4     Z        Out     0.914     4.252       -         
-int_addresse                  Net          -        -       -         -           8         
-int_address[0]                FD1P3DX      SP       In      0.000     4.252       -         
-============================================================================================
+Instance / Net                                             Pin      Pin               Arrival     No. of    
+Name                                          Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------
+uart_block.baud_gen_1.counter[10]             FD1S3DX      Q        Out     1.069     1.069       -         
+counter[10]                                   Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto13_2      ORCALUT4     A        In      0.000     1.069       -         
+uart_block.baud_gen_1.un1_counterlto13_2      ORCALUT4     Z        Out     1.010     2.078       -         
+un1_counterlto13_2                            Net          -        -       -         -           2         
+uart_block.baud_gen_1.un1_counterlto9_0_d     ORCALUT4     D        In      0.000     2.078       -         
+uart_block.baud_gen_1.un1_counterlto9_0_d     ORCALUT4     Z        Out     1.250     3.328       -         
+un1_counterlto9_0_d                           Net          -        -       -         -           12        
+uart_block.baud_gen_1.counter_4_cry_0_0       CCU2C        B1       In      0.000     3.328       -         
+uart_block.baud_gen_1.counter_4_cry_0_0       CCU2C        COUT     Out     1.224     4.552       -         
+counter_4_cry_0                               Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_1_0       CCU2C        CIN      In      0.000     4.552       -         
+uart_block.baud_gen_1.counter_4_cry_1_0       CCU2C        COUT     Out     0.050     4.602       -         
+counter_4_cry_2                               Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_3_0       CCU2C        CIN      In      0.000     4.602       -         
+uart_block.baud_gen_1.counter_4_cry_3_0       CCU2C        COUT     Out     0.050     4.652       -         
+counter_4_cry_4                               Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_5_0       CCU2C        CIN      In      0.000     4.652       -         
+uart_block.baud_gen_1.counter_4_cry_5_0       CCU2C        COUT     Out     0.050     4.702       -         
+counter_4_cry_6                               Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_7_0       CCU2C        CIN      In      0.000     4.702       -         
+uart_block.baud_gen_1.counter_4_cry_7_0       CCU2C        COUT     Out     0.050     4.752       -         
+counter_4_cry_8                               Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_9_0       CCU2C        CIN      In      0.000     4.752       -         
+uart_block.baud_gen_1.counter_4_cry_9_0       CCU2C        COUT     Out     0.050     4.802       -         
+counter_4_cry_10                              Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_11_0      CCU2C        CIN      In      0.000     4.802       -         
+uart_block.baud_gen_1.counter_4_cry_11_0      CCU2C        COUT     Out     0.050     4.852       -         
+counter_4_cry_12                              Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_cry_13_0      CCU2C        CIN      In      0.000     4.852       -         
+uart_block.baud_gen_1.counter_4_cry_13_0      CCU2C        COUT     Out     0.050     4.902       -         
+counter_4_cry_14                              Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter_4_s_15_0        CCU2C        CIN      In      0.000     4.902       -         
+uart_block.baud_gen_1.counter_4_s_15_0        CCU2C        S0       Out     1.063     5.965       -         
+counter_4[15]                                 Net          -        -       -         -           1         
+uart_block.baud_gen_1.counter[15]             FD1S3DX      D        In      0.000     5.965       -         
+============================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: top|norm_clk_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                         Starting                                                               Arrival           
+Instance                 Reference                       Type       Pin     Net                 Time        Slack 
+                         Clock                                                                                    
+------------------------------------------------------------------------------------------------------------------
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO0     ram_out_bus0[0]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO1     ram_out_bus0[1]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO2     ram_out_bus0[2]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO3     ram_out_bus0[3]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO4     ram_out_bus0[4]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO5     ram_out_bus0[5]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO6     ram_out_bus0[6]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO7     ram_out_bus0[7]     4.453       -1.392
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     DO8     ram_out_bus0[8]     4.453       -1.392
+norm_ram.ram_ram_0_1     top|norm_clk_inferred_clock     SP16KC     DO0     ram_out_bus0[9]     4.453       -1.392
+==================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+             Starting                                                                  Required           
+Instance     Reference                       Type        Pin     Net                   Time         Slack 
+             Clock                                                                                        
+----------------------------------------------------------------------------------------------------------
+data[0]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data_i_m2[0]     7.840        -1.392
+data[1]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data[1]          7.840        -1.392
+data[2]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data_i_m2[2]     7.840        -1.392
+data[3]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data[3]          7.840        -1.392
+data[4]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data[4]          7.840        -1.392
+data[5]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data_i_m2[5]     7.840        -1.392
+data[6]      top|norm_clk_inferred_clock     FD1P3DX     D       N_36                  7.840        -1.392
+data[7]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data_i_m2[7]     7.840        -1.392
+data[8]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data_i_m2[8]     7.840        -1.392
+data[9]      top|norm_clk_inferred_clock     FD1P3DX     D       next_data_i_m2[9]     7.840        -1.392
+==========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      7.886
+    - Setup time:                            0.046
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.840
+
+    - Propagation time:                      9.232
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.392
+
+    Number of logic level(s):                7
+    Starting point:                          norm_ram.ram_ram_0_0 / DO0
+    Ending point:                            data[0] / D
+    The start point is clocked by            top|norm_clk_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            top|norm_clk_inferred_clock [rising] on pin CK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                            Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+norm_ram.ram_ram_0_0            SP16KC       DO0      Out     4.453     4.453       -         
+ram_out_bus0[0]                 Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am_1[0]     ORCALUT4     C        In      0.000     4.453       -         
+norm_ram.ram_DOUT_7_am_1[0]     ORCALUT4     Z        Out     0.923     5.377       -         
+ram_DOUT_7_am_1[0]              Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am[0]       ORCALUT4     A        In      0.000     5.377       -         
+norm_ram.ram_DOUT_7_am[0]       ORCALUT4     Z        Out     0.923     6.300       -         
+ram_DOUT_7_am[0]                Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7[0]          PFUMX        BLUT     In      0.000     6.300       -         
+norm_ram.ram_DOUT_7[0]          PFUMX        Z        Out     0.091     6.391       -         
+ram_N_2671                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_11[0]         L6MUX21      D0       In      0.000     6.391       -         
+norm_ram.ram_DOUT_11[0]         L6MUX21      Z        Out     0.813     7.204       -         
+ram_N_1561                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_19[0]         L6MUX21      D0       In      0.000     7.204       -         
+norm_ram.ram_DOUT_19[0]         L6MUX21      Z        Out     0.813     8.016       -         
+ram_N_1569                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_35[0]         L6MUX21      D0       In      0.000     8.016       -         
+norm_ram.ram_DOUT_35[0]         L6MUX21      Z        Out     0.813     8.829       -         
+ram_DOUT_t[0]                   Net          -        -       -         -           1         
+next_data_i_m2[0]               ORCALUT4     C        In      0.000     8.829       -         
+next_data_i_m2[0]               ORCALUT4     Z        Out     0.403     9.232       -         
+next_data_i_m2[0]               Net          -        -       -         -           1         
+data[0]                         FD1P3DX      D        In      0.000     9.232       -         
+==============================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      7.886
+    - Setup time:                            0.046
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.840
+
+    - Propagation time:                      9.232
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.392
+
+    Number of logic level(s):                7
+    Starting point:                          norm_ram.ram_ram_0_0 / DO1
+    Ending point:                            data[1] / D
+    The start point is clocked by            top|norm_clk_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            top|norm_clk_inferred_clock [rising] on pin CK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                            Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+norm_ram.ram_ram_0_0            SP16KC       DO1      Out     4.453     4.453       -         
+ram_out_bus0[1]                 Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am_1[1]     ORCALUT4     C        In      0.000     4.453       -         
+norm_ram.ram_DOUT_7_am_1[1]     ORCALUT4     Z        Out     0.923     5.377       -         
+ram_DOUT_7_am_1[1]              Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am[1]       ORCALUT4     A        In      0.000     5.377       -         
+norm_ram.ram_DOUT_7_am[1]       ORCALUT4     Z        Out     0.923     6.300       -         
+ram_DOUT_7_am[1]                Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7[1]          PFUMX        BLUT     In      0.000     6.300       -         
+norm_ram.ram_DOUT_7[1]          PFUMX        Z        Out     0.091     6.391       -         
+ram_N_2643                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_11[1]         L6MUX21      D0       In      0.000     6.391       -         
+norm_ram.ram_DOUT_11[1]         L6MUX21      Z        Out     0.813     7.204       -         
+ram_N_1526                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_19[1]         L6MUX21      D0       In      0.000     7.204       -         
+norm_ram.ram_DOUT_19[1]         L6MUX21      Z        Out     0.813     8.016       -         
+ram_N_1534                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_35[1]         L6MUX21      D0       In      0.000     8.016       -         
+norm_ram.ram_DOUT_35[1]         L6MUX21      Z        Out     0.813     8.829       -         
+ram_DOUT_t[1]                   Net          -        -       -         -           1         
+next_data[1]                    ORCALUT4     C        In      0.000     8.829       -         
+next_data[1]                    ORCALUT4     Z        Out     0.403     9.232       -         
+next_data[1]                    Net          -        -       -         -           1         
+data[1]                         FD1P3DX      D        In      0.000     9.232       -         
+==============================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      7.886
+    - Setup time:                            0.046
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.840
+
+    - Propagation time:                      9.232
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.392
+
+    Number of logic level(s):                7
+    Starting point:                          norm_ram.ram_ram_0_0 / DO2
+    Ending point:                            data[2] / D
+    The start point is clocked by            top|norm_clk_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            top|norm_clk_inferred_clock [rising] on pin CK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                            Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+norm_ram.ram_ram_0_0            SP16KC       DO2      Out     4.453     4.453       -         
+ram_out_bus0[2]                 Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am_1[2]     ORCALUT4     C        In      0.000     4.453       -         
+norm_ram.ram_DOUT_7_am_1[2]     ORCALUT4     Z        Out     0.923     5.377       -         
+ram_DOUT_7_am_1[2]              Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am[2]       ORCALUT4     A        In      0.000     5.377       -         
+norm_ram.ram_DOUT_7_am[2]       ORCALUT4     Z        Out     0.923     6.300       -         
+ram_DOUT_7_am[2]                Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7[2]          PFUMX        BLUT     In      0.000     6.300       -         
+norm_ram.ram_DOUT_7[2]          PFUMX        Z        Out     0.091     6.391       -         
+ram_N_2615                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_11[2]         L6MUX21      D0       In      0.000     6.391       -         
+norm_ram.ram_DOUT_11[2]         L6MUX21      Z        Out     0.813     7.204       -         
+ram_N_1491                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_19[2]         L6MUX21      D0       In      0.000     7.204       -         
+norm_ram.ram_DOUT_19[2]         L6MUX21      Z        Out     0.813     8.016       -         
+ram_N_1499                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_35[2]         L6MUX21      D0       In      0.000     8.016       -         
+norm_ram.ram_DOUT_35[2]         L6MUX21      Z        Out     0.813     8.829       -         
+ram_DOUT_t[2]                   Net          -        -       -         -           1         
+next_data_i_m2[2]               ORCALUT4     C        In      0.000     8.829       -         
+next_data_i_m2[2]               ORCALUT4     Z        Out     0.403     9.232       -         
+next_data_i_m2[2]               Net          -        -       -         -           1         
+data[2]                         FD1P3DX      D        In      0.000     9.232       -         
+==============================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      7.886
+    - Setup time:                            0.046
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.840
+
+    - Propagation time:                      9.232
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.392
+
+    Number of logic level(s):                7
+    Starting point:                          norm_ram.ram_ram_0_0 / DO3
+    Ending point:                            data[3] / D
+    The start point is clocked by            top|norm_clk_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            top|norm_clk_inferred_clock [rising] on pin CK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                            Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+norm_ram.ram_ram_0_0            SP16KC       DO3      Out     4.453     4.453       -         
+ram_out_bus0[3]                 Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am_1[3]     ORCALUT4     C        In      0.000     4.453       -         
+norm_ram.ram_DOUT_7_am_1[3]     ORCALUT4     Z        Out     0.923     5.377       -         
+ram_DOUT_7_am_1[3]              Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am[3]       ORCALUT4     A        In      0.000     5.377       -         
+norm_ram.ram_DOUT_7_am[3]       ORCALUT4     Z        Out     0.923     6.300       -         
+ram_DOUT_7_am[3]                Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7[3]          PFUMX        BLUT     In      0.000     6.300       -         
+norm_ram.ram_DOUT_7[3]          PFUMX        Z        Out     0.091     6.391       -         
+ram_N_2587                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_11[3]         L6MUX21      D0       In      0.000     6.391       -         
+norm_ram.ram_DOUT_11[3]         L6MUX21      Z        Out     0.813     7.204       -         
+ram_N_1456                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_19[3]         L6MUX21      D0       In      0.000     7.204       -         
+norm_ram.ram_DOUT_19[3]         L6MUX21      Z        Out     0.813     8.016       -         
+ram_N_1464                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_35[3]         L6MUX21      D0       In      0.000     8.016       -         
+norm_ram.ram_DOUT_35[3]         L6MUX21      Z        Out     0.813     8.829       -         
+ram_DOUT_t[3]                   Net          -        -       -         -           1         
+next_data[3]                    ORCALUT4     C        In      0.000     8.829       -         
+next_data[3]                    ORCALUT4     Z        Out     0.403     9.232       -         
+next_data[3]                    Net          -        -       -         -           1         
+data[3]                         FD1P3DX      D        In      0.000     9.232       -         
+==============================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      7.886
+    - Setup time:                            0.046
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         7.840
+
+    - Propagation time:                      9.232
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.392
+
+    Number of logic level(s):                7
+    Starting point:                          norm_ram.ram_ram_0_0 / DO4
+    Ending point:                            data[4] / D
+    The start point is clocked by            top|norm_clk_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            top|norm_clk_inferred_clock [rising] on pin CK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                            Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+norm_ram.ram_ram_0_0            SP16KC       DO4      Out     4.453     4.453       -         
+ram_out_bus0[4]                 Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am_1[4]     ORCALUT4     C        In      0.000     4.453       -         
+norm_ram.ram_DOUT_7_am_1[4]     ORCALUT4     Z        Out     0.923     5.377       -         
+ram_DOUT_7_am_1[4]              Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7_am[4]       ORCALUT4     A        In      0.000     5.377       -         
+norm_ram.ram_DOUT_7_am[4]       ORCALUT4     Z        Out     0.923     6.300       -         
+ram_DOUT_7_am[4]                Net          -        -       -         -           1         
+norm_ram.ram_DOUT_7[4]          PFUMX        BLUT     In      0.000     6.300       -         
+norm_ram.ram_DOUT_7[4]          PFUMX        Z        Out     0.091     6.391       -         
+ram_N_2559                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_11[4]         L6MUX21      D0       In      0.000     6.391       -         
+norm_ram.ram_DOUT_11[4]         L6MUX21      Z        Out     0.813     7.204       -         
+ram_N_1421                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_19[4]         L6MUX21      D0       In      0.000     7.204       -         
+norm_ram.ram_DOUT_19[4]         L6MUX21      Z        Out     0.813     8.016       -         
+ram_N_1429                      Net          -        -       -         -           1         
+norm_ram.ram_DOUT_35[4]         L6MUX21      D0       In      0.000     8.016       -         
+norm_ram.ram_DOUT_35[4]         L6MUX21      Z        Out     0.813     8.829       -         
+ram_DOUT_t[4]                   Net          -        -       -         -           1         
+next_data[4]                    ORCALUT4     C        In      0.000     8.829       -         
+next_data[4]                    ORCALUT4     Z        Out     0.403     9.232       -         
+next_data[4]                    Net          -        -       -         -           1         
+data[4]                         FD1P3DX      D        In      0.000     9.232       -         
+==============================================================================================
 
 
 
 ##### END OF TIMING REPORT #####]
 
+
+Finished final timing analysis (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 161MB peak: 163MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 161MB peak: 163MB)
+
 ---------------------------------------
 Resource Usage Report
-Part: lfe3_35ea-6
+Part: lfe3_35ea-8
 
-Register bits: 86 of 33264 (0%)
+Register bits: 332 of 33264 (1%)
 PIC Latch:       0
-I/O cells:       49
+I/O cells:       30
+Block Rams : 72 of 72 (100%)
 
 
 Details:
-CCU2C:          10
-FD1P3BX:        1
-FD1P3DX:        57
-FD1S3BX:        1
-FD1S3DX:        3
+CCU2C:          77
+DCS:            1
+FD1P3DX:        164
+FD1S3AX:        26
+FD1S3BX:        2
+FD1S3DX:        72
+FD1S3IX:        43
+FD1S3JX:        1
 GSR:            1
-IB:             21
-IFS1P3DX:       10
-INV:            1
-OB:             28
-OFS1P3DX:       14
-ORCALUT4:       165
+IB:             4
+IFS1P3BX:       1
+INV:            4
+L6MUX21:        105
+OB:             26
+OFS1P3BX:       4
+OFS1P3DX:       19
+ORCALUT4:       646
+PFUMX:          121
 PUR:            1
-VHI:            1
-VLO:            1
+SP16KC:         72
+VHI:            6
+VLO:            5
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 53MB peak: 150MB)
+At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 57MB peak: 163MB)
 
-Process took 0h:00m:07s realtime, 0h:00m:06s cputime
-# Thu Apr 24 18:16:22 2014
+Process took 0h:00m:07s realtime, 0h:00m:07s cputime
+# Fri Sep 11 13:39:56 2015
 
 ###########################################################]
 

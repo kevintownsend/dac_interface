@@ -1,40 +1,45 @@
-         Lattice Mapping Report File for Design Module 'uart_parser'
+
+             Lattice Mapping Report File for Design Module 'top'
+
 
 Design Information
 ------------------
 
-Command line:   map -a LatticeECP3 -p LFE3-35EA -t FTBGA256 -s 6 -oc Commercial
+Command line:   map -a LatticeECP3 -p LFE3-35EA -t FPBGA484 -s 8 -oc Commercial
      dac_dac.ngd -o dac_dac_map.ncd -pr dac_dac.prf -mp dac_dac.mrp
      C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/DAC.lpf
-     -gui
+     -gui 
 Target Vendor:  LATTICE
-Target Device:  LFE3-35EAFTBGA256
-Target Performance:   6
-Mapper:  ep5c00,  version:  Diamond (64-bit) 3.1.0.96
-Mapped on:  04/24/14  18:16:39
+Target Device:  LFE3-35EAFPBGA484
+Target Performance:   8
+Mapper:  ep5c00,  version:  Diamond (64-bit) 3.5.0.102
+Mapped on:  09/11/15  13:40:00
 
 Design Summary
 --------------
 
-   Number of registers:     86 out of 25746 (0%)
-      PFU registers:           62 out of 24948 (0%)
-      PIO registers:           24 out of   798 (3%)
-   Number of SLICEs:       109 out of 16632 (1%)
-      SLICEs as Logic/ROM:    109 out of 16632 (1%)
+   Number of registers:    332 out of 26718 (1%)
+      PFU registers:          308 out of 24948 (1%)
+      PIO registers:           24 out of  1770 (1%)
+   Number of SLICEs:       518 out of 16632 (3%)
+      SLICEs as Logic/ROM:    518 out of 16632 (3%)
       SLICEs as RAM:            0 out of  3204 (0%)
-      SLICEs as Carry:         10 out of 16632 (0%)
-   Number of LUT4s:        187 out of 33264 (1%)
-      Number of logic LUTs:      167
+      SLICEs as Carry:         77 out of 16632 (0%)
+   Number of LUT4s:        804 out of 33264 (2%)
+      Number of logic LUTs:      650
       Number of distributed RAM:   0 (0 LUT4s)
-      Number of ripple logic:     10 (20 LUT4s)
+      Number of ripple logic:     77 (154 LUT4s)
       Number of shift registers:   0
-   Number of PIO sites used: 49 out of 133 (37%)
+   Number of PIO sites used: 31 out of 295 (11%)
+      Number of PIO sites used for single ended IOs: 29
+      Number of PIO sites used for differential IOs: 2 (represented by 1 PIO
+     comps in NCD)
    Number of PIO FIXEDDELAY:    0
    Number of PCS (SerDes):  0 out of 1 (0%) with bonded PIO sites
    Number of DQSDLLs:  0 out of 2 (0%)
    Number of PLLs:  0 out of 4 (0%)
    Number of DLLs:  0 out of 2 (0%)
-   Number of block RAMs:  0 out of 72 (0%)
+   Number of block RAMs:  72 out of 72 (100%)
    Number of CLKDIVs:  0 out of 2 (0%)
    Number of GSRs:  1 out of 1 (100%)
    JTAG used :      No
@@ -47,7 +52,7 @@ Design Summary
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
 
-   Number Of Mapped DSP Components:
+        Number Of Mapped DSP Components:
    --------------------------------
    MULT18X18C          0
    MULT9X9C            0
@@ -55,235 +60,513 @@ Design Summary
    ALU24A              0
    --------------------------------
    Number of Used DSP MULT Sites:  0 out of 128 (0 %)
-   Number of Used DSP ALU Sites:  0 out of 64 (0 %)
-   Number of clocks:  1
-     Net clock_c: 61 loads, 61 rising, 0 falling (Driver: PIO clock )
-   Number of Clock Enables:  18
 
                                     Page 1
 
 
 
 
-Design:  uart_parser                                   Date:  04/24/14  18:16:39
+Design:  top                                           Date:  09/11/15  13:40:00
 
 Design Summary (cont)
 ---------------------
-     Net read_done: 8 loads, 0 LSLICEs
-     Net N_57_i: 2 loads, 1 LSLICEs
-     Net un1_write_req7_2_0_a2: 8 loads, 0 LSLICEs
-     Net new_rx_data_c: 6 loads, 6 LSLICEs
-     Net un1_data_param10_0: 4 loads, 4 LSLICEs
-     Net bin_byte_counte: 4 loads, 4 LSLICEs
-     Net N_460_i: 5 loads, 0 LSLICEs
-     Net N_55: 1 loads, 1 LSLICEs
-     Net read_op9: 2 loads, 2 LSLICEs
-     Net tx_end_p: 2 loads, 2 LSLICEs
-     Net N_475_i: 2 loads, 2 LSLICEs
-     Net N_51: 1 loads, 1 LSLICEs
-     Net un1_write_req7_2_i: 1 loads, 1 LSLICEs
-     Net un1_read_req7_2_i: 1 loads, 1 LSLICEs
-     Net int_addresse: 4 loads, 4 LSLICEs
-     Net un1_bin_write_op5_0: 1 loads, 1 LSLICEs
-     Net un1_bin_read_op5_0: 1 loads, 1 LSLICEs
-     Net un1_addr_param13_0: 4 loads, 4 LSLICEs
-   Number of local set/reset loads for net reset_c merged into GSR:  86
-   Number of LSRs:  0
+   Number of Used DSP ALU Sites:  0 out of 64 (0 %)
+   Number of clocks:  2
+     Net clk_c: 144 loads, 144 rising, 0 falling (Driver: PIO clk )
+     Net norm_clk: 120 loads, 105 rising, 15 falling (Driver: dcs2 )
+   Number of Clock Enables:  25
+     Net N_5_i: 17 loads, 17 LSLICEs
+     Net N_345_i: 3 loads, 0 LSLICEs
+     Net uart_block/uart_tx_1/un1_tx_busy5_0: 1 loads, 1 LSLICEs
+     Net uart_block/uart_tx_1/un1_data_buf9_0: 5 loads, 5 LSLICEs
+     Net uart_block/uart_tx_1/N_30_i: 2 loads, 2 LSLICEs
+     Net uart_block/baud_clk: 2 loads, 2 LSLICEs
+     Net uart_block/uart_rx_1/rx_data4: 4 loads, 4 LSLICEs
+     Net uart_block/uart_rx_1/un1_rx_busy5_0_a2: 1 loads, 1 LSLICEs
+     Net uart_block/uart_rx_1/data_buf8: 4 loads, 4 LSLICEs
+     Net norm_mode_extern_clk: 1 loads, 0 LSLICEs
+     Net e_o_RNIVA111: 4 loads, 4 LSLICEs
+     Net N_448_i: 8 loads, 8 LSLICEs
+     Net N_347_i: 3 loads, 1 LSLICEs
+     Net N_449_i: 1 loads, 0 LSLICEs
+     Net scratchce[0]: 4 loads, 4 LSLICEs
+     Net scratchce[15]: 1 loads, 1 LSLICEs
+     Net N_22: 1 loads, 1 LSLICEs
+     Net div_clk_dividerce[0]: 4 loads, 4 LSLICEs
+     Net div_clk_dividerce[8]: 4 loads, 4 LSLICEs
+     Net div_clk_dividerce[16]: 4 loads, 4 LSLICEs
+     Net div_clk_dividerce[24]: 4 loads, 4 LSLICEs
+     Net data_sizece[0]: 4 loads, 4 LSLICEs
+     Net data_sizece[8]: 4 loads, 4 LSLICEs
+     Net data_sizece[16]: 4 loads, 4 LSLICEs
+     Net data_sizece[24]: 4 loads, 4 LSLICEs
+   Number of local set/reset loads for net rstn_c merged into GSR:  258
+   Number of LSRs:  3
+     Net norm_mode_div_clk8_i: 1 loads, 1 LSLICEs
+     Net un1_div_clk_count_1_cry_i[30]: 22 loads, 22 LSLICEs
+     Net norm_mode_extern_clk_2_i: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net new_rx_data_c: 31 loads
-     Net rx_data_c[4]: 24 loads
-     Net un28lto0_c: 19 loads
-     Net main_sm[4]: 16 loads
-     Net VCC: 16 loads
-     Net rx_data_c[5]: 15 loads
-     Net bin_read_op: 14 loads
-     Net main_sm[9]: 14 loads
-     Net rx_data_c[2]: 14 loads
-     Net rx_data_c[1]: 12 loads
+     Net uart_block/baud_gen_1/VCC: 120 loads
+     Net data_count[10]: 78 loads
+     Net data_count[4]: 78 loads
+     Net data_count[5]: 78 loads
+     Net data_count[0]: 77 loads
+     Net data_count[1]: 77 loads
+     Net data_count[2]: 77 loads
+     Net data_count[3]: 77 loads
+     Net data_count[6]: 77 loads
+     Net data_count[7]: 77 loads
 
 
 
 
-   Number of warnings:  38
+   Number of warnings:  77
    Number of errors:    0
+     
 
-Design Errors/Warnings
-----------------------
 
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(10): Semantic
-     error in "FREQUENCY NET "clk_c" 100.000000 MHz ;": clk_c matches no clock
-     nets in the design.  Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(4): Semantic
-     error in "LOCATE COMP "led0" SITE "Y20" ;": COMP "led0" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(5): Semantic
-     error in "LOCATE COMP "led1" SITE "AA21" ;": COMP "led1" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(6): Semantic
 
                                     Page 2
 
 
 
 
-Design:  uart_parser                                   Date:  04/24/14  18:16:39
+Design:  top                                           Date:  09/11/15  13:40:00
 
-Design Errors/Warnings (cont)
------------------------------
-     error in "LOCATE COMP "led2" SITE "U18" ;": COMP "led2" not found in
-     design. Disable this preference.
+Design Errors/Warnings
+----------------------
+
 WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(7): Semantic
-     error in "LOCATE COMP "clk" SITE "L5" ;": COMP "clk" not found in design.
-     Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(8): Semantic
-     error in "LOCATE COMP "rstn" SITE "A21" ;": COMP "rstn" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(9): Semantic
-     error in "LOCATE COMP "uart_in" SITE "G19" ;": COMP "uart_in" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(11): Semantic
-     error in "LOCATE COMP "uart_out" SITE "G20" ;": COMP "uart_out" not found
-     in design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(12): Semantic
-     error in "LOCATE COMP "clk_calin_n" SITE "G15" ;": COMP "clk_calin_n" not
-     found in design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(13): Semantic
-     error in "LOCATE COMP "rst_in_n" SITE "D15" ;": COMP "rst_in_n" not found
-     in design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(14): Semantic
-     error in "LOCATE COMP "en_in_n" SITE "C15" ;": COMP "en_in_n" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(15): Semantic
-     error in "LOCATE COMP "d_in_14" SITE "B11" ;": COMP "d_in_14" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(16): Semantic
-     error in "LOCATE COMP "d_in_13" SITE "B12" ;": COMP "d_in_13" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(17): Semantic
-     error in "LOCATE COMP "d_in_12" SITE "A12" ;": COMP "d_in_12" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(18): Semantic
-     error in "LOCATE COMP "d_in_11" SITE "A13" ;": COMP "d_in_11" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(19): Semantic
-     error in "LOCATE COMP "d_in_10" SITE "E12" ;": COMP "d_in_10" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(20): Semantic
-     error in "LOCATE COMP "d_in_9" SITE "E13" ;": COMP "d_in_9" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(21): Semantic
+     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(27): Semantic
+     error in "LOCATE COMP "oe_cal_n" SITE "E22" ;": COMP "oe_cal_n" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: Preference parsing results:  1 semantic error detected.
+WARNING - map: Using local reset signal 'rstn_c' to infer global GSR net.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_0_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_35_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_35_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_34_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_34_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_33_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_33_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_32_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_32_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_31_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
 
                                     Page 3
 
 
 
 
-Design:  uart_parser                                   Date:  04/24/14  18:16:39
+Design:  top                                           Date:  09/11/15  13:40:00
 
 Design Errors/Warnings (cont)
 -----------------------------
-     error in "LOCATE COMP "d_in_8" SITE "C13" ;": COMP "d_in_8" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(22): Semantic
-     error in "LOCATE COMP "clk_out_fpga" SITE "A17" ;": COMP "clk_out_fpga" not
-     found in design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(23): Semantic
-     error in "IOBUF PORT "clk_out_fpga" IO_TYPE=LVCMOS33 SLEWRATE=SLOW
-     PULLMODE=UP DRIVE=20 ;": Port "clk_out_fpga" does not exist in the design.
-     Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(24): Semantic
-     error in "LOCATE COMP "adr_2" SITE "G14" ;": COMP "adr_2" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(25): Semantic
-     error in "LOCATE COMP "adr_1" SITE "B16" ;": COMP "adr_1" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(26): Semantic
-     error in "LOCATE COMP "adr_0" SITE "F15" ;": COMP "adr_0" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(27): Semantic
-     error in "LOCATE COMP "oe_cal_n" SITE "E22" ;": COMP "oe_cal_n" not found
-     in design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(28): Semantic
-     error in "LOCATE COMP "clk_in_fpga" SITE "A19" ;": COMP "clk_in_fpga" not
-     found in design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(29): Semantic
-     error in "IOBUF PORT "led2" IO_TYPE=LVCMOS33 ;": Port "led2" does not exist
-     in the design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(30): Semantic
-     error in "IOBUF PORT "clk" IO_TYPE=LVDS25 ;": Port "clk" does not exist in
-     the design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(31): Semantic
-     error in "LOCATE COMP "d_in_7" SITE "A15" ;": COMP "d_in_7" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(32): Semantic
-     error in "LOCATE COMP "d_in_6" SITE "F14" ;": COMP "d_in_6" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(33): Semantic
-     error in "LOCATE COMP "d_in_5" SITE "F13" ;": COMP "d_in_5" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(34): Semantic
-     error in "LOCATE COMP "d_in_4" SITE "B14" ;": COMP "d_in_4" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_31_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_30_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_30_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_29_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_29_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_28_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_28_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_27_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_27_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_26_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_26_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
 
                                     Page 4
 
 
 
 
-Design:  uart_parser                                   Date:  04/24/14  18:16:39
+Design:  top                                           Date:  09/11/15  13:40:00
 
 Design Errors/Warnings (cont)
 -----------------------------
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(35): Semantic
-     error in "LOCATE COMP "d_in_3" SITE "A14" ;": COMP "d_in_3" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(36): Semantic
-     error in "LOCATE COMP "d_in_2" SITE "D14" ;": COMP "d_in_2" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(37): Semantic
-     error in "LOCATE COMP "d_in_1" SITE "D13" ;": COMP "d_in_1" not found in
-     design. Disable this preference.
-WARNING - map: C:/Users/KT/My
-     Projects/dac_interface/lattice_project/dac/source/DAC.lpf(38): Semantic
-     error in "LOCATE COMP "d_in_0" SITE "C14" ;": COMP "d_in_0" not found in
-     design. Disable this preference.
-WARNING - map: Preference parsing results:  35 semantic errors detected
-WARNING - map: Using local reset signal 'reset_c' to infer global GSR net.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_25_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_25_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_24_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_24_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_23_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_23_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_22_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_22_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_21_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_21_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_20_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_20_0' cannot be controlled.
+
+                                    Page 5
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_19_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_19_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_18_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_18_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_17_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_17_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_16_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_16_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_15_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_15_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_14_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+
+                                    Page 6
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_14_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_13_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_13_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_12_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_12_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_11_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_11_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_10_1' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_10_0' cannot be controlled.
+     The local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_9_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_9_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+
+                                    Page 7
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_8_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_8_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_7_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_7_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_6_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_6_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_5_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_5_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_4_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_4_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_3_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+
+                                    Page 8
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Design Errors/Warnings (cont)
+-----------------------------
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_3_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_2_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_2_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_1_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_1_0' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The reset of EBR 'norm_ram/ram_ram_0_1' cannot be controlled. The
+     local reset is not connected to any control signal and set to GND. The
+     global reset is disabled via GSR property. To control the EBR reset, either
+     connect the local reset to a control signal or force the GSR property to be
+     enabled.
+WARNING - map: The signal "rstn" has been assigned to PIN "A21", which is a dual
+     function pin. This pin will be used during the configuration of the device.
+     The pin can be used for logic after configuration. External logic may be
+     needed to avoid contention on this pin.
 WARNING - map: There are semantic errors in the preference file C:/Users/KT/My
      Projects/dac_interface/lattice_project/dac/source/DAC.lpf.
 
@@ -294,155 +577,2048 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
 |                     |           |  IO_TYPE  | Register   |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[0]          | OUTPUT    | LVCMOS33  | OUT        |            |
+| led0                | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| clock               | INPUT     | LVCMOS33  |            |            |
+| rstn                | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_gnt             | INPUT     | LVCMOS33  |            |            |
+| d_in[14]            | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_req             | OUTPUT    | LVCMOS33  |            |            |
+| d_in[13]            | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_read            | OUTPUT    | LVCMOS33  |            |            |
+| d_in[12]            | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_rd_data[7]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_rd_data[6]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_rd_data[5]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_rd_data[4]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_rd_data[3]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_rd_data[2]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_rd_data[1]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_rd_data[0]      | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_write           | OUTPUT    | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| int_wr_data[7]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[11]            | OUTPUT    | LVCMOS33  | OUT        |            |
 
-                                    Page 5
+                                    Page 9
 
 
 
 
-Design:  uart_parser                                   Date:  04/24/14  18:16:39
+Design:  top                                           Date:  09/11/15  13:40:00
 
 IO (PIO) Attributes (cont)
 --------------------------
 +---------------------+-----------+-----------+------------+------------+
-| int_wr_data[6]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[10]            | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_wr_data[5]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[9]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_wr_data[4]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[8]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_wr_data[3]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[7]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_wr_data[2]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[6]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_wr_data[1]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[5]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_wr_data[0]      | OUTPUT    | LVCMOS33  | OUT        |            |
+| d_in[4]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[7]      | OUTPUT    | LVCMOS33  |            |            |
+| d_in[3]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[6]      | OUTPUT    | LVCMOS33  |            |            |
+| d_in[2]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[5]      | OUTPUT    | LVCMOS33  |            |            |
+| d_in[1]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[4]      | OUTPUT    | LVCMOS33  |            |            |
+| d_in[0]             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[3]      | OUTPUT    | LVCMOS33  |            |            |
+| uart_out            | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[2]      | OUTPUT    | LVCMOS33  |            |            |
+| uart_in             | INPUT     | LVCMOS33  | IN         |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[1]      | OUTPUT    | LVCMOS33  |            |            |
+| clk_out_fpga        | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| int_address[0]      | OUTPUT    | LVCMOS33  |            |            |
+| clk_in_fpga         | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_busy             | INPUT     | LVCMOS33  | IN         |            |
+| adr[2]              | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| new_tx_data         | OUTPUT    | LVCMOS33  | OUT        |            |
+| adr[1]              | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[7]          | OUTPUT    | LVCMOS33  |            |            |
+| adr[0]              | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[6]          | OUTPUT    | LVCMOS33  | OUT        |            |
+| clk_calin_n         | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[5]          | OUTPUT    | LVCMOS33  |            |            |
+| en_in_n             | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[4]          | OUTPUT    | LVCMOS33  | OUT        |            |
+| rst_in_n            | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[3]          | OUTPUT    | LVCMOS33  |            |            |
+| led2                | OUTPUT    | LVCMOS33  | OUT        |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[2]          | OUTPUT    | LVCMOS33  | OUT        |            |
+| led1                | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-| tx_data[1]          | OUTPUT    | LVCMOS33  | OUT        |            |
-+---------------------+-----------+-----------+------------+------------+
-| new_rx_data         | INPUT     | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[7]          | INPUT     | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[6]          | INPUT     | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[5]          | INPUT     | LVCMOS33  |            |            |
-
-                                    Page 6
-
-
-
-
-Design:  uart_parser                                   Date:  04/24/14  18:16:39
-
-IO (PIO) Attributes (cont)
---------------------------
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[4]          | INPUT     | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[3]          | INPUT     | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[2]          | INPUT     | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[1]          | INPUT     | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
-| rx_data[0]          | INPUT     | LVCMOS33  | IN         |            |
-+---------------------+-----------+-----------+------------+------------+
-| reset               | INPUT     | LVCMOS33  |            |            |
+| clk                 | INPUT     | LVDS25    |            |            |
 +---------------------+-----------+-----------+------------+------------+
 
 Removed logic
 -------------
 
-Signal int_address_cry_0_S0[0] undriven or does not drive anything - clipped.
+Block sdr_data/VCC undriven or does not drive anything - clipped.
+Block uart_block/uart_rx_1/VCC undriven or does not drive anything - clipped.
+Block uart_block/uart_rx_1/GND undriven or does not drive anything - clipped.
+
+                                   Page 10
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Block uart_block/uart_tx_1/GND undriven or does not drive anything - clipped.
+Block uart_block/uart_tx_1/VCC undriven or does not drive anything - clipped.
+Signal rstn_c_i was merged into signal rstn_c
+Signal norm_clk_i_0 was merged into signal norm_clk
+Signal norm_ram/VCC undriven or does not drive anything - clipped.
+Signal next_data_count14_0_I_15_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_15_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_45_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_45_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_39_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_39_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_21_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_21_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_63_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_63_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_27_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_27_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_87_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_87_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_1_0_S0 undriven or does not drive anything -
+     clipped.
 Signal N_1 undriven or does not drive anything - clipped.
-Signal bin_byte_count_s_0_S1[7] undriven or does not drive anything - clipped.
-Signal bin_byte_count_s_0_COUT[7] undriven or does not drive anything - clipped.
-Signal bin_byte_count_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal un1_div_clk_count_1_cry_0_S0[30] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_COUT[30] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[26] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[26] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[22] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[22] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[18] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[18] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[15] undriven or does not drive anything -
+     clipped.
+
+                                   Page 11
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal un1_div_clk_count_1_cry_0_S0[15] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[13] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[13] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[11] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[11] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[9] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[9] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[7] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[7] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[5] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[5] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[3] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[3] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[1] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[1] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S1[0] undriven or does not drive anything -
+     clipped.
+Signal un1_div_clk_count_1_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
 Signal N_2 undriven or does not drive anything - clipped.
-Signal int_address_s_0_S1[7] undriven or does not drive anything - clipped.
-Signal int_address_s_0_COUT[7] undriven or does not drive anything - clipped.
+Signal un2_div_clk_count_s_31_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un2_div_clk_count_s_31_0_COUT undriven or does not drive anything -
+     clipped.
+Signal un2_div_clk_count_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal un2_div_clk_count_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal N_3 undriven or does not drive anything - clipped.
+Signal data_count_s_0_S1[31] undriven or does not drive anything - clipped.
+Signal data_count_s_0_COUT[31] undriven or does not drive anything - clipped.
+Signal data_count_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_4 undriven or does not drive anything - clipped.
+Signal counter_cry_0_COUT[9] undriven or does not drive anything - clipped.
+Signal counter_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_5 undriven or does not drive anything - clipped.
+Signal default_clk_out_div_s_0_S1[9] undriven or does not drive anything -
+     clipped.
+Signal default_clk_out_div_s_0_COUT[9] undriven or does not drive anything -
+     clipped.
+Signal default_clk_out_div_cry_0_S0[0] undriven or does not drive anything -
+
+                                   Page 12
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal N_6 undriven or does not drive anything - clipped.
+Signal sdr_data/VCC undriven or does not drive anything - clipped.
+Signal uart_block/baud_gen_1/counter_4_s_15_0_S1 undriven or does not drive
+     anything - clipped.
+Signal uart_block/baud_gen_1/counter_4_s_15_0_COUT undriven or does not drive
+     anything - clipped.
+Signal uart_block/baud_gen_1/counter_4_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal uart_block/baud_gen_1/counter_4_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal uart_block/baud_gen_1/N_1 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus0[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_1_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus1[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO16 undriven or does not drive anything - clipped.
+
+                                   Page 13
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_2_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_2_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus2[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_3_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus3[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_4_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus4[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO14 undriven or does not drive anything - clipped.
+
+                                   Page 14
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_5_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_5_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus5[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_6_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus6[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO9 undriven or does not drive anything - clipped.
+
+                                   Page 15
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_7_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_7_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus7[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_8_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus8[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_9_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus9[15] undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_10_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_0_DO12 undriven or does not drive anything - clipped.
+
+                                   Page 16
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_10_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_10_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_10_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_10_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_10_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus10[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_11_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_1_DO12 undriven or does not drive anything - clipped.
+     
+
+                                   Page 17
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_11_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_11_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_11_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_11_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus11[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_12_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_12_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_12_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_12_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus12[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO13 undriven or does not drive anything - clipped.
+
+                                   Page 18
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_13_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_13_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_13_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_13_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_13_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus13[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_14_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_1_DO13 undriven or does not drive anything - clipped.
+     
+
+                                   Page 19
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_14_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_14_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_14_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_14_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus14[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_15_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_15_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_15_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_15_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus15[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO14 undriven or does not drive anything - clipped.
+
+                                   Page 20
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_16_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_16_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_16_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_16_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_16_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus16[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_17_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_1_DO14 undriven or does not drive anything - clipped.
+     
+
+                                   Page 21
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_17_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_17_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_17_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_17_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus17[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_18_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_18_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_18_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_18_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus18[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO15 undriven or does not drive anything - clipped.
+
+                                   Page 22
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_19_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_19_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_19_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_19_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_19_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus19[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_20_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_1_DO15 undriven or does not drive anything - clipped.
+     
+
+                                   Page 23
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_20_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_20_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_20_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_20_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus20[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_21_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_21_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_21_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_21_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus21[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO16 undriven or does not drive anything - clipped.
+
+                                   Page 24
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_22_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_22_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_22_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_22_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_22_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus22[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_23_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_1_DO16 undriven or does not drive anything - clipped.
+     
+
+                                   Page 25
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_23_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_23_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_23_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_23_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus23[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_24_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_24_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_24_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_24_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus24[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO17 undriven or does not drive anything - clipped.
+
+                                   Page 26
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_25_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_25_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_25_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_25_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_25_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus25[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_26_1_DO17 undriven or does not drive anything - clipped.
+     
+
+                                   Page 27
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_26_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_26_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_26_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_26_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus26[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_27_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_27_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_27_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_27_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus27[15] undriven or does not drive anything - clipped.
+
+                                   Page 28
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_28_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_28_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_28_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_28_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_28_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus28[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_0_DO9 undriven or does not drive anything - clipped.
+
+                                   Page 29
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_29_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_29_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_29_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_29_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus29[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_30_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_30_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_30_1_DO8 undriven or does not drive anything - clipped.
+
+                                   Page 30
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_30_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus30[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_31_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_31_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_31_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_31_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus31[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_0_DO10 undriven or does not drive anything - clipped.
+
+                                   Page 31
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_32_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_32_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_32_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_32_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_32_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus32[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_33_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_33_1_DO10 undriven or does not drive anything - clipped.
+     
+
+                                   Page 32
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+Signal norm_ram/ram_ram_33_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_33_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_33_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus33[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_34_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_34_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_34_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_34_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus34[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO11 undriven or does not drive anything - clipped.
+
+                                   Page 33
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Removed logic (cont)
+--------------------
+     
+Signal norm_ram/ram_ram_35_0_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_0_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_35_1_DO17 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO16 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO15 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO14 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO13 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO12 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO11 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO10 undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_35_1_DO9 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_35_1_DO8 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_35_1_DO7 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_out_bus35[15] undriven or does not drive anything - clipped.
+     
+Signal norm_ram/ram_ram_0_0_DO17 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO16 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO15 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO14 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO13 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO12 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO11 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO10 undriven or does not drive anything - clipped.
+Signal norm_ram/ram_ram_0_0_DO9 undriven or does not drive anything - clipped.
+Signal next_data_count14_0_I_69_0_S0 undriven or does not drive anything -
+     clipped.
+Signal next_data_count14_0_I_69_0_COUT undriven or does not drive anything -
+     clipped.
+Block rstn_pad_RNIR42A was optimized away.
+Block norm_clk_inferred_clock_RNIERC5 was optimized away.
+Block norm_ram/VCC was optimized away.
+
+Memory Usage
+------------
+
+/norm_ram:
+    EBRs: 72
+    RAM SLICEs: 0
+    Logic SLICEs: 60
+    PFU Registers: 15
+    -Contains EBR ram_ram_0_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_35_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_35_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+
+                                   Page 34
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Memory Usage (cont)
+-------------------
+    -Contains EBR ram_ram_34_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_34_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_33_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_33_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_32_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_32_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_31_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_31_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_30_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_30_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_29_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_29_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_28_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_28_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_27_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_27_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_26_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_26_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_25_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_25_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_24_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_24_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_23_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_23_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_22_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_22_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_21_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_21_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+
+                                   Page 35
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Memory Usage (cont)
+-------------------
+    -Contains EBR ram_ram_20_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_20_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_19_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_19_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_18_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_18_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_17_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_17_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_16_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_16_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_15_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_15_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_14_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_14_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_13_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_13_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_12_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_12_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_11_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_11_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_10_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_10_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,
+         REGMODE= NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_9_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_9_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_8_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_8_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_7_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_7_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+
+                                   Page 36
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+Memory Usage (cont)
+-------------------
+    -Contains EBR ram_ram_6_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_6_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_5_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_5_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_4_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_4_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_3_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_3_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_2_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_2_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_1_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_1_0:  TYPE= SP16KC,  Width= 9,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+    -Contains EBR ram_ram_0_1:  TYPE= SP16KC,  Width= 6,  Depth= 2048,  REGMODE=
+         NOREG,  WRITEMODE= READBEFOREWRITE,  GSR= DISABLED
+
+DCS Summary
+-----------
+
+DCS 1:                                     Pin/Node Value
+  DCS Instance Name:                                dcs2
+  DCS Mode:                                         NEG
+  Input Clock0:                            PIN      clk_c
+  Input Clock1:                            NODE     norm_clk_mid
+  Output Clock:                            NODE     norm_clk
+  Select Input:                            NODE     norm_mode_extern_clk
+
+ASIC Components
+---------------
+
+Instance Name: norm_ram/ram_ram_0_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_35_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_35_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_34_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_34_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_33_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_33_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_32_1
+
+                                   Page 37
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+ASIC Components (cont)
+----------------------
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_32_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_31_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_31_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_30_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_30_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_29_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_29_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_28_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_28_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_27_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_27_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_26_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_26_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_25_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_25_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_24_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_24_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_23_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_23_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_22_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_22_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_21_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_21_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_20_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_20_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_19_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_19_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_18_1
+
+                                   Page 38
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+ASIC Components (cont)
+----------------------
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_18_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_17_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_17_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_16_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_16_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_15_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_15_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_14_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_14_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_13_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_13_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_12_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_12_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_11_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_11_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_10_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_10_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_9_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_9_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_8_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_8_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_7_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_7_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_6_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_6_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_5_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_5_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_4_1
+
+                                   Page 39
+
+
+
+
+Design:  top                                           Date:  09/11/15  13:40:00
+
+ASIC Components (cont)
+----------------------
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_4_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_3_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_3_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_2_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_2_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_1_1
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_1_0
+         Type: SP16KC
+Instance Name: norm_ram/ram_ram_0_1
+         Type: SP16KC
+Instance Name: dcs2
+         Type: DCS
 
 GSR Usage
 ---------
 
 GSR Component:
-   The local reset signal 'reset_c' of the design has been inferred as Global
-        Set Reset (GSR). The reset signal used for GSR control is 'reset_c'.
+   The local reset signal 'rstn_c' of the design has been inferred as Global Set
+        Reset (GSR). The reset signal used for GSR control is 'rstn_c'.
+        
 
-GSR Property:
+     GSR Property:
    The design components with GSR property set to ENABLED will respond to global
         set reset while the components with GSR property set to DISABLED will
         not.
+        
 
 Run Time and Memory Usage
 -------------------------
 
-   Total CPU Time: 1 secs
-   Total REAL Time: 7 secs
-   Peak Memory Usage: 58 MB
+   Total CPU Time: 1 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 147 MB
+        
 
 
 
@@ -457,15 +2633,14 @@ Run Time and Memory Usage
 
 
 
-                                    Page 7
+
+
+                                   Page 40
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995
-     AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent
-     Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems
-     All rights reserved.
-Copyright (c) 2002-2014 Lattice Semiconductor
-     Corporation,  All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights
+     reserved.

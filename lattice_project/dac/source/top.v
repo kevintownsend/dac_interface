@@ -256,7 +256,8 @@ always @(posedge clk or negedge rstn) begin
 	end
 end
 assign led2 = r_led2;
-assign led0 = counter[27];
+//assign led0 = counter[27];
+assign led0 = data[0];
 assign led1 = counter[10];
 
 //state combinational logic

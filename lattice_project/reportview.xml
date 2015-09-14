@@ -2,8 +2,8 @@
 <!DOCTYPE Report>
 <ReportView version="2.0">
     <Implement name="dac">
+        <ToolReport id="tooldec" path="C:/Users/KT/My Projects/dac_interface/lattice_project/dac/dac_dac_eco.html" status="1"/>
         <ToolReport id="toolhle_genhierarchy" path="C:/Users/KT/My Projects/dac_interface/lattice_project/dac/hdla_gen_hierarchy.html" status="1"/>
-        <ToolReport id="toolhle_runbkm" path="" status="0"/>
         <ToolReport id="toolpio" path="" status="0"/>
         <ToolReport id="toolsso" path="" status="0"/>
     </Implement>

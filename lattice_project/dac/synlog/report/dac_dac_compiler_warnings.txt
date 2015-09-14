@@ -1,2 +1,7 @@
-@W: CL271 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":372:0:372:5|Pruning bits 15 to 8 of addr_param[15:0] -- not in use ...
+@W: CG133 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":94:23:94:44|No assignment to next_norm_mode_div_clk
+@W: CG133 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":95:26:95:50|No assignment to next_norm_mode_extern_clk
+@W: CG360 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":174:5:174:20|No assignment to wire norm_clk_mid_buf
+@W: CG360 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":216:5:216:12|No assignment to wire test_clk
+@W: CG360 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":216:15:216:22|No assignment to wire test_out
+@W: CL271 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Pruning bits 7 to 4 of status[7:0] -- not in use ...
 

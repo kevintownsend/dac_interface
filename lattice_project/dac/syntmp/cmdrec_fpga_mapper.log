@@ -1,11 +1,11 @@
-C:\lscc\diamond\3.1_x64\synpbase\bin64\m_gen_lattice.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac"  -part LFE3_35EA  -package FTN256C  -grade -6   -maxfan 1000    -pipe -forcenogsr -fixgatedclocks 1 -fixgeneratedclocks 1 -RWCheckOnRam 1  -use_rename_in_edif 1     -summaryfile "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\report\dac_dac_fpga_mapper.xml" -top_level_module  uart_parser  -flow mapping  -oedif  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.edi"  -autoconstraint  -freq 1.000  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_prem.srd"  -devicelib  C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\ecp3.v  -devicelib  C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\pmi_def.v  -ologparam  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\syntmp\dac_dac.plg"  -osyn  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srm"  -prjdir  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\"  -prjname  proj_1  -log  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\dac_dac_fpga_mapper.srr" 
+C:\lscc\diamond\3.5_x64\synpbase\bin64\m_gen_lattice.exe  -prodtype  synplify_pro  -encrypt  -pro  -rundir  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac"   -part LFE3_35EA  -package FN484C  -grade -8    -maxfan 1000 -pipe -forcenogsr -fixgatedclocks 1 -fixgeneratedclocks 1 -RWCheckOnRam 1 -use_rename_in_edif 1 -Write_declared_clocks_only 1 -summaryfile "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\report\dac_dac_fpga_mapper.xml"  -top_level_module  top  -flow mapping  -multisrs  -oedif  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.edi"   -autoconstraint  -freq 1.000   "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_prem.srd"  -devicelib  C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v  -devicelib  C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\pmi_def.v  -ologparam  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\syntmp\dac_dac.plg"  -osyn  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srm"  -prjdir  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\"  -prjname  proj_1  -log  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\dac_dac_fpga_mapper.srr" 
 rc:1 success:1
-C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.edi|o|1398381381|161424
-C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_prem.srd|i|1398381373|12527
-C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\ecp3.v|i|1384790068|117673
-C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\pmi_def.v|i|1389815298|39417
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.edi|o|1441996795|1056538
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_prem.srd|i|1441996788|28144
+C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v|i|1429020374|120358
+C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\pmi_def.v|i|1429020374|40584
 "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\syntmp\dac_dac.plg"|o|0|0
-C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srm|o|1398381380|36630
-C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\dac_dac_fpga_mapper.srr|o|1398381382|26386
-C:\lscc\diamond\3.1_x64\synpbase\bin64\m_gen_lattice.exe|i|1384794214|24035840
-C:\lscc\diamond\3.1_x64\synpbase\bin\m_gen_lattice.exe|i|1384791482|20549632
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srm|o|1441996795|53548
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\dac_dac_fpga_mapper.srr|o|1441996796|69775
+C:\lscc\diamond\3.5_x64\synpbase\bin\m_gen_lattice.exe|i|1429568170|17277440
+C:\lscc\diamond\3.5_x64\synpbase\bin64\m_gen_lattice.exe|i|1429569808|20520960

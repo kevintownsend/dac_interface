@@ -4,8 +4,8 @@
 #device options
 set_option -technology LATTICE-ECP3
 set_option -part LFE3_35EA
-set_option -package FTN256C
-set_option -speed_grade -6
+set_option -package FN484C
+set_option -speed_grade -8
 
 #compilation/mapping options
 set_option -symbolic_fsm_compiler true
@@ -62,7 +62,7 @@ add_file -verilog {C:/Users/KT/My Projects/dac_interface/lattice_project/dac/sou
 add_file -verilog {C:/Users/KT/My Projects/dac_interface/lattice_project/dac/source/baud_gen.v}
 
 #-- top module name
-set_option -top_module uart_parser
+set_option -top_module top
 
 #-- set result format/file last
 project -result_file {C:/Users/KT/My Projects/dac_interface/lattice_project/dac/dac_dac.edi}

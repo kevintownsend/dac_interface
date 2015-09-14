@@ -1,12 +1,12 @@
 
 
-##### START OF TIMING REPORT #####[
-# Timing Report written on Thu Apr 24 18:16:22 2014
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Fri Sep 11 13:39:56 2015
 #
 
 
-Top view:               uart_parser
-Requested Frequency:    249.1 MHz
+Top view:               top
+Requested Frequency:    126.8 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    
@@ -20,25 +20,32 @@ Performance Summary
 *******************
 
 
-Worst slack in design: 0.365
+Worst slack in design: 0.231
 
-                      Requested     Estimated     Requested     Estimated                Clock        Clock                
-Starting Clock        Frequency     Frequency     Period        Period        Slack      Type         Group                
----------------------------------------------------------------------------------------------------------------------------
-uart_parser|clock     249.1 MHz     211.7 MHz     4.015         4.724         -0.709     inferred     Autoconstr_clkgroup_0
-===========================================================================================================================
+                                Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock                  Frequency     Frequency     Period        Period        Slack      Type         Group                
+-------------------------------------------------------------------------------------------------------------------------------------
+top|clk                         194.5 MHz     165.3 MHz     5.142         6.049         -0.907     inferred     Autoconstr_clkgroup_0
+top|norm_clk_inferred_clock     126.8 MHz     107.8 MHz     7.886         9.278         -1.392     inferred     Autoconstr_clkgroup_1
+System                          1.0 MHz       NA            1000.000      NA            NA         system       system_clkgroup      
+=====================================================================================================================================
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
 
 
 
 Clock Relationships
 *******************
 
-Clocks                                |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
-----------------------------------------------------------------------------------------------------------------------------
-Starting           Ending             |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
-----------------------------------------------------------------------------------------------------------------------------
-uart_parser|clock  uart_parser|clock  |  0.000       0.365  |  No paths    -      |  No paths    -      |  No paths    -    
-============================================================================================================================
+Clocks                                                    |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                     Ending                       |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------
+top|clk                      System                       |  0.000       0.688  |  No paths    -      |  No paths    -      |  No paths    -    
+top|clk                      top|clk                      |  0.000       0.581  |  No paths    -      |  No paths    -      |  No paths    -    
+top|clk                      top|norm_clk_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+top|norm_clk_inferred_clock  top|clk                      |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+top|norm_clk_inferred_clock  top|norm_clk_inferred_clock  |  0.000       0.231  |  No paths    -      |  3.943       4.632  |  No paths    -    
+================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -52,7 +59,7 @@ No IO constraint found
 
 
 ====================================
-Detailed Report for Clock: uart_parser|clock
+Detailed Report for Clock: top|clk
 ====================================
 
 
@@ -60,41 +67,41 @@ Detailed Report for Clock: uart_parser|clock
 Starting Points with Worst Slack
 ********************************
 
-                Starting                                                  Arrival          
-Instance        Reference             Type        Pin     Net             Time        Slack
-                Clock                                                                      
--------------------------------------------------------------------------------------------
-read_done       uart_parser|clock     FD1S3DX     Q       read_done       0.696       0.365
-main_sm[7]      uart_parser|clock     FD1P3DX     Q       main_sm[7]      0.561       0.487
-int_read        uart_parser|clock     FD1P3DX     Q       int_read_c      0.599       0.525
-tx_sm[3]        uart_parser|clock     FD1P3DX     Q       tx_sm[3]        0.632       0.559
-tx_sm[2]        uart_parser|clock     FD1P3DX     Q       tx_sm[2]        0.670       0.596
-read_req        uart_parser|clock     FD1P3DX     Q       read_req        0.632       0.602
-write_req       uart_parser|clock     FD1P3DX     Q       write_req       0.632       0.602
-tx_sm[1]        uart_parser|clock     FD1S3DX     Q       tx_sm[1]        0.696       0.622
-main_sm[8]      uart_parser|clock     FD1P3DX     Q       main_sm[8]      0.698       0.624
-main_sm[10]     uart_parser|clock     FD1P3DX     Q       main_sm[10]     0.674       0.644
-===========================================================================================
+                                      Starting                                                               Arrival          
+Instance                              Reference     Type         Pin     Net                                 Time        Slack
+                                      Clock                                                                                   
+------------------------------------------------------------------------------------------------------------------------------
+status[2]                             top|clk       FD1P3DX      Q       status[2]                           0.748       0.581
+status[3]                             top|clk       FD1P3DX      Q       status[3]                           0.748       0.581
+uart_block.uart_rx_1.data_buf[0]      top|clk       FD1P3DX      Q       data_buf[0]                         0.688       0.628
+uart_block_uart_rx_1_in_syncio[0]     top|clk       IFS1P3BX     Q       uart_block.uart_rx_1.in_sync[0]     0.688       0.628
+uart_block.baud_gen_1.ce_16           top|clk       FD1S3DX      Q       baud_clk                            0.936       0.672
+norm_mode_extern_clk                  top|clk       FD1S3IX      Q       norm_mode_extern_clk                0.688       0.688
+uart_block.uart_rx_1.data_buf[1]      top|clk       FD1P3DX      Q       data_buf[1]                         0.748       0.689
+uart_block.uart_rx_1.data_buf[2]      top|clk       FD1P3DX      Q       data_buf[2]                         0.748       0.689
+uart_block.uart_rx_1.data_buf[3]      top|clk       FD1P3DX      Q       data_buf[3]                         0.748       0.689
+uart_block.uart_rx_1.data_buf[4]      top|clk       FD1P3DX      Q       data_buf[4]                         0.748       0.689
+==============================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                       Starting                                                  Required          
-Instance               Reference             Type         Pin     Net            Time         Slack
-                       Clock                                                                       
----------------------------------------------------------------------------------------------------
-read_data_s_0io[0]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-read_data_s_0io[1]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-read_data_s_0io[2]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-read_data_s_0io[3]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-read_data_s_0io[4]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-read_data_s_0io[5]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-read_data_s_0io[6]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-read_data_s_0io[7]     uart_parser|clock     IFS1P3DX     SP      read_done      0.330        0.365
-main_sm[8]             uart_parser|clock     FD1P3DX      D       main_sm[7]     0.074        0.487
-read_done              uart_parser|clock     FD1S3DX      D       int_read_c     0.074        0.525
-===================================================================================================
+                                     Starting                                                       Required          
+Instance                             Reference     Type        Pin     Net                          Time         Slack
+                                     Clock                                                                            
+----------------------------------------------------------------------------------------------------------------------
+norm_mode_div_clk                    top|clk       FD1S3JX     PD      norm_mode_div_clk8_i         0.450        0.581
+norm_mode_extern_clk                 top|clk       FD1S3IX     CD      norm_mode_extern_clk_2_i     0.450        0.581
+uart_block.uart_rx_1.in_sync[1]      top|clk       FD1S3BX     D       in_sync[0]                   0.059        0.628
+uart_block.uart_rx_1.rx_data[0]      top|clk       FD1P3DX     D       data_buf[0]                  0.059        0.628
+uart_block.uart_rx_1.count16[0]      top|clk       FD1P3DX     SP      baud_clk                     0.264        0.672
+uart_block.uart_rx_1.count16[1]      top|clk       FD1P3DX     SP      baud_clk                     0.264        0.672
+uart_block.uart_rx_1.count16[2]      top|clk       FD1P3DX     SP      baud_clk                     0.264        0.672
+uart_block.uart_rx_1.count16[3]      top|clk       FD1P3DX     SP      baud_clk                     0.264        0.672
+dcs2                                 top|clk       DCS         SEL     norm_mode_extern_clk         0.000        0.688
+uart_block.uart_rx_1.data_buf[0]     top|clk       FD1P3DX     D       data_buf[1]                  0.059        0.689
+======================================================================================================================
 
 
 
@@ -103,26 +110,105 @@ Worst Path Information
 
 
 Path information for path number 1: 
-    Propagation time:                        0.696
+    Propagation time:                        1.030
     + Clock delay at starting point:         0.000 (ideal)
     - Requested Period:                      0.000
-    - Hold time:                             0.330
+    - Hold time:                             0.450
     - Clock delay at ending point:           0.000 (ideal)
-    = Slack (critical) :                     0.365
+    = Slack (non-critical) :                 0.581
+
+    Number of logic level(s):                1
+    Starting point:                          status[2] / Q
+    Ending point:                            norm_mode_div_clk / PD
+    The start point is clocked by            top|clk [rising] on pin CK
+    The end   point is clocked by            top|clk [rising] on pin CK
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+status[2]                FD1P3DX      Q        Out     0.748     0.748       -         
+status[2]                Net          -        -       -         -           2         
+norm_mode_div_clk8_i     ORCALUT4     A        In      0.000     0.748       -         
+norm_mode_div_clk8_i     ORCALUT4     Z        Out     0.282     1.030       -         
+norm_mode_div_clk8_i     Net          -        -       -         -           1         
+norm_mode_div_clk        FD1S3JX      PD       In      0.000     1.030       -         
+=======================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: top|norm_clk_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                  Starting                                                              Arrival          
+Instance          Reference                       Type        Pin     Net               Time        Slack
+                  Clock                                                                                  
+---------------------------------------------------------------------------------------------------------
+data_count[0]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[0]     1.383       0.231
+data_count[1]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[1]     1.383       0.231
+data_count[2]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[2]     1.383       0.231
+data_count[3]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[3]     1.383       0.231
+data_count[6]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[6]     1.383       0.231
+data_count[7]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[7]     1.383       0.231
+data_count[8]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[8]     1.383       0.231
+data_count[9]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[9]     1.383       0.231
+data_count[4]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[4]     1.396       0.244
+data_count[5]     top|norm_clk_inferred_clock     FD1P3DX     Q       data_count[5]     1.396       0.244
+=========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                         Starting                                                              Required          
+Instance                 Reference                       Type       Pin      Net               Time         Slack
+                         Clock                                                                                   
+-----------------------------------------------------------------------------------------------------------------
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD3      data_count[0]     1.152        0.231
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD4      data_count[1]     1.152        0.231
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD5      data_count[2]     1.152        0.231
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD6      data_count[3]     1.152        0.231
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD9      data_count[6]     1.152        0.231
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD10     data_count[7]     1.152        0.231
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD11     data_count[8]     1.152        0.231
+norm_ram.ram_ram_0_0     top|norm_clk_inferred_clock     SP16KC     AD12     data_count[9]     1.152        0.231
+norm_ram.ram_ram_0_1     top|norm_clk_inferred_clock     SP16KC     AD3      data_count[0]     1.152        0.231
+norm_ram.ram_ram_0_1     top|norm_clk_inferred_clock     SP16KC     AD4      data_count[1]     1.152        0.231
+=================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.383
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             1.152
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     0.231
 
     Number of logic level(s):                0
-    Starting point:                          read_done / Q
-    Ending point:                            read_data_s_0io[0] / SP
-    The start point is clocked by            uart_parser|clock [rising] on pin CK
-    The end   point is clocked by            uart_parser|clock [rising] on pin SCLK
+    Starting point:                          data_count[0] / Q
+    Ending point:                            norm_ram.ram_ram_0_0 / AD3
+    The start point is clocked by            top|norm_clk_inferred_clock [rising] on pin CK
+    The end   point is clocked by            top|norm_clk_inferred_clock [rising] on pin CLK
 
-Instance / Net                      Pin      Pin               Arrival     No. of    
-Name                   Type         Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------
-read_done              FD1S3DX      Q        Out     0.696     0.696       -         
-read_done              Net          -        -       -         -           9         
-read_data_s_0io[0]     IFS1P3DX     SP       In      0.000     0.696       -         
-=====================================================================================
+Instance / Net                       Pin      Pin               Arrival     No. of    
+Name                     Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------
+data_count[0]            FD1P3DX     Q        Out     1.383     1.383       -         
+data_count[0]            Net         -        -       -         -           77        
+norm_ram.ram_ram_0_0     SP16KC      AD3      In      0.000     1.383       -         
+======================================================================================
 
 
 

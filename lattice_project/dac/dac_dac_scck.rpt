@@ -1,12 +1,12 @@
-# Synospys Constraint Checker(syntax only), version maplat, Build 800R, built Nov 18 2013
-# Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+# Synopsys Constraint Checker(syntax only), version maplat, Build 1176R, built Apr 20 2015
+# Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
 
-# Written on Thu Apr 24 18:16:11 2014
+# Written on Fri Sep 11 13:39:48 2015
 
 
 ##### DESIGN INFO #######################################################
 
-Top View:                "uart_parser"
+Top View:                "top"
 Constraint File(s):      (none)
 
 #Run constraint checker to find more issues with constraints.
@@ -19,10 +19,12 @@ No issues found in constraint syntax.
 
 
 Clock Summary
-**************
+*************
 
-Start                 Requested     Requested     Clock        Clock                
-Clock                 Frequency     Period        Type         Group                
-------------------------------------------------------------------------------------
-uart_parser|clock     287.1 MHz     3.483         inferred     Autoconstr_clkgroup_0
-====================================================================================
+Start                           Requested     Requested     Clock        Clock                
+Clock                           Frequency     Period        Type         Group                
+----------------------------------------------------------------------------------------------
+System                          1.0 MHz       1000.000      system       system_clkgroup      
+top|clk                         309.1 MHz     3.236         inferred     Autoconstr_clkgroup_0
+top|norm_clk_inferred_clock     4.2 MHz       240.613       inferred     Autoconstr_clkgroup_1
+==============================================================================================

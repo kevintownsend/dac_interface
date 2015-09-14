@@ -1,1 +1,2 @@
-CKID0001:@|S:clock@|E:addr_auto_inc@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0001:@|S:dcs2@|E:norm_ram.ram_adreg[16]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:clk@|E:default_clk_out_div[0]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 

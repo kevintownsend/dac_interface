@@ -6,19 +6,19 @@ The file contains the job information from compiler to be displayed as part of t
 
 <job_run_status name="compiler"> 
   <report_link name="Detailed report">
-    <data>C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr</data>
-    <title>Start of Compile</title>
+    <data>C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\dac_dac_compiler.srr</data>
+    <title>Synopsys HDL Compiler</title>
   </report_link> 
   <job_status>
     <data>Completed    </data>
   </job_status>
 <job_info> 
 			<info name="Notes">
-  <data>4</data>
+  <data>18</data>
   <report_link name="more"><data>C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\report\dac_dac_compiler_notes.txt</data></report_link>
   </info>
 			<info name="Warnings">
-  <data>1</data>
+  <data>6</data>
   <report_link name="more"><data>C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\report\dac_dac_compiler_warnings.txt</data></report_link>
   </info>
 			<info name="Errors">
@@ -29,13 +29,13 @@ The file contains the job information from compiler to be displayed as part of t
   <data>-</data>
   </info>
 			<info name="Real Time">
-  <data>0h:00m:02s</data>
+  <data>0h:00m:01s</data>
   </info>
 			<info name="Peak Memory">
   <data>-</data>
   </info>
 			<info name="Date &amp;Time">
-  <data type="timestamp">1398381369</data>
+  <data type="timestamp">1441996787</data>
   </info>
 			</job_info>
 </job_run_status>

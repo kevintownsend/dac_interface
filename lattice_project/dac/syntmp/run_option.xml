@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <!-- 
   Synopsys, Inc.
-  Version I-2013.09L 
+  Version J-2015.03L
   Project file C:\Users\KT\My Projects\dac_interface\lattice_project\dac\syntmp\run_option.xml
-  Written on Thu Apr 24 18:16:07 2014
+  Written on Fri Sep 11 13:39:46 2015
 
 
 --> 
 <project_attribute_list name="Project Settings"> 
      <option name="project_name" display_name="Project Name">proj_1</option>
      <option name="impl_name" display_name="Implementation Name">dac</option>
-     <option name="top_module" display_name="Top Module">uart_parser</option>
+     <option name="top_module" display_name="Top Module">top</option>
      <option name="pipe" display_name="Pipelining">1</option>
      <option name="retiming" display_name="Retiming">0</option>
      <option name="resource_sharing" display_name="Resource Sharing">1</option>

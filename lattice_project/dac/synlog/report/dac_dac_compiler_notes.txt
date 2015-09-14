@@ -1,5 +1,19 @@
 @N|Running in 64-bit mode
-@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":6:7:6:17|Synthesizing module uart_parser
-@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":509:0:509:5|Trying to extract state machine for register tx_sm
-@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_parser.v":132:0:132:5|Trying to extract state machine for register main_sm
+@N|Running in 64-bit mode
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":138:7:138:9|Synthesizing module DCS
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":752:7:752:8|Synthesizing module OB
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":1029:7:1029:9|Synthesizing module VLO
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":1707:7:1707:13|Synthesizing module ODDRXD1
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":795:7:795:14|Synthesizing module OFS1P3DX
+@N: CG364 :"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\ecp3.v":1025:7:1025:9|Synthesizing module VHI
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v":8:7:8:15|Synthesizing module sdr_15bit
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\baud_gen.v":13:7:13:14|Synthesizing module baud_gen
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_rx.v":6:7:6:13|Synthesizing module uart_rx
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_tx.v":6:7:6:13|Synthesizing module uart_tx
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\uart_top.v":6:7:6:14|Synthesizing module uart_top
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ram.v":1:7:1:9|Synthesizing module ram
+@N: CL134 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Found RAM ram, depth=72001, width=16
+@N: CG364 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":5:7:5:9|Synthesizing module top
+@N: CL201 :"C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Trying to extract state machine for register state
+@N|Running in 64-bit mode
 

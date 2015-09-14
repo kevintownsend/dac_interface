@@ -24,15 +24,16 @@
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="0" update_result="3" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
         <Milestone name="Translate" build_result="0" build_time="0">
             <Task name="Translate" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name="dac_dac.bgn" last_build_time="1398381513" last_build_size="3837"/>
-        <Report name="dac_dac.bit" last_build_time="1398381513" last_build_size="895434"/>
-        <Report name="dac_dac.edi" last_build_time="1398381381" last_build_size="161424"/>
-        <Report name="dac_dac.ncd" last_build_time="1398381470" last_build_size="184921"/>
-        <Report name="dac_dac.ngd" last_build_time="1398381399" last_build_size="170673"/>
-        <Report name="dac_dac_map.ncd" last_build_time="1398381406" last_build_size="122224"/>
+        <Report name="dac_dac.bgn" last_build_time="1441996848" last_build_size="3817"/>
+        <Report name="dac_dac.bit" last_build_time="1441996848" last_build_size="897751"/>
+        <Report name="dac_dac.edi" last_build_time="1441996795" last_build_size="1056538"/>
+        <Report name="dac_dac.ncd" last_build_time="1442248894" last_build_size="1386165"/>
+        <Report name="dac_dac.ngd" last_build_time="1441996799" last_build_size="922140"/>
+        <Report name="dac_dac_map.ncd" last_build_time="1441996802" last_build_size="894462"/>
     </Strategy>
 </BuildStatus>

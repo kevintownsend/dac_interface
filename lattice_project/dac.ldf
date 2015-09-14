@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BaliProject version="3.0" title="dac" device="LFE3-35EA-6FTN256C" default_implementation="dac">
+<BaliProject version="3.2" title="dac" device="LFE3-35EA-8FN484C" default_implementation="dac">
     <Options/>
     <Implementation title="dac" dir="dac" description="dac" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="uart_parser"/>
+        <Options def_top="uart_parser" top="top"/>
         <Source name="dac/source/top.v" type="Verilog" type_short="Verilog">
             <Options top_module="top"/>
         </Source>
@@ -19,7 +19,7 @@
             <Options/>
         </Source>
         <Source name="dac/source/ddr1.ipx" type="IPX_Module" type_short="IPX">
-            <Options top_module="ddr1"/>
+            <Options/>
         </Source>
         <Source name="dac/source/ddr1.lpc" type="LPC_Module" type_short="LPC">
             <Options/>
@@ -28,7 +28,7 @@
             <Options/>
         </Source>
         <Source name="dac/source/pll_filter.ipx" type="IPX_Module" type_short="IPX">
-            <Options top_module="pll_filter"/>
+            <Options/>
         </Source>
         <Source name="dac/source/pll_filter.lpc" type="LPC_Module" type_short="LPC">
             <Options/>
@@ -37,7 +37,7 @@
             <Options/>
         </Source>
         <Source name="dac/source/uart_parser.v" type="Verilog" type_short="Verilog">
-            <Options top_module="uart_parser"/>
+            <Options/>
         </Source>
         <Source name="dac/source/uart_rx.v" type="Verilog" type_short="Verilog">
             <Options/>
@@ -49,6 +49,9 @@
             <Options/>
         </Source>
         <Source name="dac/source/baud_gen.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="dac/dac.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
         <Source name="dac/source/DAC.lpf" type="Logic Preference" type_short="LPF">

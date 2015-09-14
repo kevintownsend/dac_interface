@@ -1,15 +1,33 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled 
+@N: BN114 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\sdr_15bit.v":39:12:39:24|Removing instance sdr_data.Inst3_ODDRXD1 of black_box view:work.ODDRXD1(verilog) because there are no references to its outputs 
 @N: MT206 |Auto Constrain mode is enabled
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[6] mapped in logic.
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[4:0] mapped in logic.
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[6] mapped in logic.
-@N: MO106 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|Found ROM, 'tx_char[6]', 15 words by 1 bits 
-@N: FA239 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|ROM tx_char[4:0] mapped in logic.
-@N: MO106 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\uart_parser.v":644:1:644:4|Found ROM, 'tx_char[4:0]', 15 words by 5 bits 
-@N: FX164 |The option to pack flops in the IOB has not been specified 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[31] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[30] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[29] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[28] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[27] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[16] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":458:0:458:5|Removing sequential instance state[3] of view:PrimLib.dffr(prim) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: MF179 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":332:6:332:29|Found 32 bit by 32 bit '==' comparator, 'next_data_count14'
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[16]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[17]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[19]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[18]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[20]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[21]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[23]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[22]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[24]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\top.v":104:0:104:5|Instance "div_clk_count[25]" with 4 loads replicated 1 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Instance "norm_ram.ram_adreg[12]" with 178 loads replicated 3 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Instance "norm_ram.ram_adreg[11]" with 144 loads replicated 3 times to improve timing 
+@N: FX271 :"c:\users\kt\my projects\dac_interface\lattice_project\dac\source\ram.v":13:1:13:6|Instance "norm_ram.ram_adreg[13]" with 104 loads replicated 3 times to improve timing 
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
 @N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 @N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
 @N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
 @N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
