@@ -1,0 +1,112 @@
+Running in Lattice mode
+
+sourcing C:\lscc\diamond\3.5_x64\synpbase\lib\message_override.tcl
+
+
+Starting:    C:\lscc\diamond\3.5_x64\synpbase\bin64\mbin\synbatch.exe
+Install:     C:\lscc\diamond\3.5_x64\synpbase
+Hostname:    FIREFLY
+Date:        Fri Sep 11 13:29:30 2015
+Version:     J-2015.03L
+
+Arguments:   -product synplify_pro -batch dac_dac_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\sdr_15bit.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ddr1.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\ddr1.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\pll_filter.v"
+
+Warning: File already exists in project: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\source\pll_filter.v"
+
+log file: "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr"
+
+Running: dac in foreground
+
+
+
+Running proj_1|dac
+
+
+Running: compile (Compile) on proj_1|dac
+
+
+Running: compile_flow (Compile Process) on proj_1|dac
+
+
+Running: compiler (Compile Input) on proj_1|dac
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_comp.srs to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srs
+
+
+compiler Completed
+Return Code: 0
+Run Time:0h:00m:02s
+
+
+Running: multi_srs_gen (Multi-srs Generator) on proj_1|dac
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_comp.srs to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_s.srs
+
+
+multi_srs_gen Completed
+Return Code: 0
+Run Time:0h:00m:00s
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_mult.srs to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srs
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srf
+
+Complete: Compile Process on proj_1|dac
+
+
+Running: premap (Pre-mapping) on proj_1|dac
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.fse to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_s.fse
+
+
+premap Completed with warnings
+Return Code: 1
+Run Time:0h:00m:01s
+
+Complete: Compile on proj_1|dac
+
+
+Running: map (Map) on proj_1|dac
+
+
+Running: fpga_mapper (Map & Optimize) on proj_1|dac
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_m.srm to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srm
+
+
+fpga_mapper Completed with warnings
+Return Code: 1
+Run Time:0h:00m:08s
+
+Complete: Map on proj_1|dac
+
+Copied C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srr to C:\Users\KT\My Projects\dac_interface\lattice_project\dac\dac_dac.srf
+
+Complete: Logic Synthesis on proj_1|dac
+
+TCL script complete: "dac_dac_synplify.tcl"
+
+exit status=0
+
+exit status=0
+
+Save changes for project:
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\proj_1.prj
+
+batch mode default:no
+

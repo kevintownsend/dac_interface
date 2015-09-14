@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.5_x64\synpbase\bin64\syn_nfilter.exe  -link  -top  top  -multisrs  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_comp.srs"  -osyn  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_mult.srs"  -log  "C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\dac_dac_multi_srs_gen.srr" 
+rc:0 success:1
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_comp.srs|i|1441996787|18729
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synwork\dac_dac_mult.srs|o|1441996788|10480
+C:\Users\KT\My Projects\dac_interface\lattice_project\dac\synlog\dac_dac_multi_srs_gen.srr|o|1441996788|485
+C:\lscc\diamond\3.5_x64\synpbase\bin\syn_nfilter.exe|i|1429565366|3000832
+C:\lscc\diamond\3.5_x64\synpbase\bin64\syn_nfilter.exe|i|1429565558|3967488
